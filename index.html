@@ -1,169 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bohol Heirloom Seed Conservation Network</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bohol Seed Network | Seed Sovereignty & Agricultural Innovation</title>
+    <style>
+        :root {
+            --primary: #2e7d32;
+            --primary-light: #e8f5e9;
+            --secondary: #8d6e63;
+            --dark: #263238;
+            --light: #f8f9fa;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-<style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f4faf4;
-    color: #2d3a2d;
-}
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+        }
 
-header {
-    background: linear-gradient(90deg, #1b5e20, #43a047);
-    color: white;
-    padding: 30px 20px;
-    text-align: center;
-}
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
 
-header h1 {
-    margin: 0;
-    font-size: 32px;
-}
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
 
-nav {
-    background: #2e7d32;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
+        header p {
+            font-size: 1.1rem;
+            font-style: italic;
+            opacity: 0.9;
+        }
 
-nav a {
-    color: white;
-    padding: 12px 18px;
-    text-decoration: none;
-    font-weight: bold;
-}
+        nav {
+            background-color: #1b5e20;
+            padding: 0.5rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
 
-nav a:hover {
-    background: #1b5e20;
-}
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            margin: 0 0.25rem;
+            font-weight: bold;
+            display: inline-block;
+        }
 
-.hero {
-    padding: 70px 20px;
-    text-align: center;
-    background: url('https://images.unsplash.com/photo-1464226184884-fa280b87c399') center/cover;
-    color: white;
-}
+        nav a:hover {
+            background-color: var(--primary);
+            border-radius: 4px;
+        }
 
-.hero h2 {
-    font-size: 38px;
-    background: rgba(0,0,0,0.5);
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 8px;
-}
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
 
-.container {
-    max-width: 1000px;
-    margin: auto;
-    padding: 20px;
-}
+        .hero {
+            background-color: var(--primary-light);
+            border-left: 5px solid var(--primary);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2.5rem;
+        }
 
-.card {
-    background: white;
-    padding: 20px;
-    margin: 15px 0;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
+        .hero h2 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
 
-.button {
-    display: inline-block;
-    background: #2e7d32;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 5px;
-    text-decoration: none;
-    margin-top: 10px;
-}
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2.5rem;
+        }
 
-.button:hover {
-    background: #1b5e20;
-}
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--primary);
+        }
 
-footer {
-    background: #1b5e20;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    margin-top: 30px;
-}
-</style>
+        .card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
 
+        .img-placeholder {
+            background-color: #ddd;
+            width: 100%;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            color: #666;
+            font-size: 0.9rem;
+            overflow: hidden;
+        }
+
+        .img-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .badge {
+            background-color: var(--secondary);
+            color: white;
+            padding: 0.2rem 0.6rem;
+            font-size: 0.8rem;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            background-color: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            header h1 { font-size: 2rem; }
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
-
 <body>
 
-<header>
-    <h1>Bohol Heirloom Seed Conservation Network</h1>
-    <p>Green Gardens of Hope Initiative</p>
-</header>
+    <header>
+        <h1>Bohol Seed Network</h1>
+        <p>Empowering Farmers through Seed Sovereignty & Agro-Ecological Innovations</p>
+    </header>
 
-<nav>
-    <a href="#about">About</a>
-    <a href="#mission">Mission</a>
-    <a href="#programs">Programs</a>
-    <a href="#membership">Membership</a>
-    <a href="#contact">Contact</a>
-</nav>
+    <nav>
+        <a href="#about">Our Mission</a>
+        <a href="#sovereignty">Seed Sovereignty</a>
+        <a href="#bioponics">Bioponics</a>
+        <a href="#soil">Soil Amendments</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-<div class="hero">
-    <h2>Protecting Heirloom Seeds for Future Generations</h2>
-</div>
+    <div class="container">
+        
+        <section id="about" class="hero">
+            <h2>Advancing Sustainable Agriculture in Bohol</h2>
+            <p>The Bohol Seed Network is a community-driven initiative focused on developing resilient agricultural systems. Through strategic upcycling, localized seed libraries, and circular economy practices, we provide practical, tech-voc aligned training to ensure long-term food security and climate resilience for local farming communities.</p>
+        </section>
 
-<div class="container">
+        <section class="grid">
+            
+            <!-- Section 1: Seed Sovereignty -->
+            <div id="sovereignty" class="card">
+                <div class="img-placeholder">
+                    <!-- Replace 'seeds.jpg' with your uploaded image filename -->
+                    <img src="seeds.jpg" alt="Heirloom vegetable seeds saved in jars">
+                </div>
+                <span class="badge">Community-Led</span>
+                <h3>Seed Sovereignty</h3>
+                <p>We are dedicated to safeguarding genetic diversity by establishing municipal seed libraries. By preserving heirloom and open-pollinated vegetable varieties, we protect local farmers from seed dependency and reinforce regional agricultural resilience.</p>
+                <br>
+                <p><strong>Focus Area:</strong> Vegetable Seed Production NC III standards and regional adaptation.</p>
+            </div>
 
-<section id="about" class="card">
-    <h2>🌱 About</h2>
-    <p>
-    The Bohol Heirloom Seed Conservation Network is a provincial initiative
-    dedicated to preserving traditional vegetable seeds and strengthening local farming systems.
-    </p>
-</section>
+            <!-- Section 2: Bioponics -->
+            <div id="bioponics" class="card">
+                <div class="img-placeholder">
+                    <!-- Replace 'bioponics.jpg' with your uploaded image filename -->
+                    <img src="bioponics.jpg" alt="Bioponic growing system using upcycled vessels">
+                </div>
+                <span class="badge">Strategic Upcycling</span>
+                <h3>Bioponic Succession Systems</h3>
+                <p>Our low-cost, stagnant bioponic models are designed specifically for non-electric, rural, and resource-limited spaces. We creatively upcycle post-consumer plastics into high-performance cultivation vessels that utilize organic, biologically active nutrient mixtures.</p>
+                <br>
+                <p><strong>Focus Area:</strong> Affordable, zero-electricity hydroponics using organic-based inputs.</p>
+            </div>
 
-<section id="mission" class="card">
-    <h2>🎯 Mission</h2>
-    <p>
-    To conserve agricultural biodiversity, improve food security, and empower farmers
-    through community-based seed conservation and training.
-    </p>
-</section>
+            <!-- Section 3: Organic Soil Amendments -->
+            <div id="soil" class="card">
+                <div class="img-placeholder">
+                    <!-- Replace 'biochar.jpg' with your uploaded image filename -->
+                    <img src="biochar.jpg" alt="Dark organic compost and biochar substrate">
+                </div>
+                <span class="badge">Circular Economy</span>
+                <h3>Biochar & Soil Amendments</h3>
+                <p>We actively combat agricultural waste by processing municipal and farm bio-waste into rich, biochar-enriched organic soil amendments. This system builds long-term soil microbiology, increases soil water retention, and locks carbon into the earth.</p>
+                <br>
+                <p><strong>Focus Area:</strong> Repurposing bio-waste substrates for sustainable crop production.</p>
+            </div>
 
-<section id="programs" class="card">
-    <h2>🌾 Programs</h2>
-    <ul>
-        <li>Heirloom Seed Conservation</li>
-        <li>Farmer Training & Workshops</li>
-        <li>Community Seed Banking</li>
-        <li>School & Youth Gardening</li>
-    </ul>
-</section>
+        </section>
 
-<section id="membership" class="card">
-    <h2>🏛 Municipal Membership</h2>
-    <p><b>Bronze:</b> 1 training seminar per year</p>
-    <p><b>Silver:</b> Seminar + demonstration farm</p>
-    <p><b>Gold:</b> Full seed bank + custodians + annual exchange</p>
+        <!-- Contact Section -->
+        <section id="contact" class="card" style="border-top-color: var(--secondary); max-width: 600px; margin: 0 auto;">
+            <h3 style="color: var(--secondary); text-align: center;">Collaborate With Us</h3>
+            <p style="text-align: center; margin-bottom: 1.5rem;">Are you an agricultural innovator, local government unit, or smallholder farmer looking to build sustainable community models? Let's connect.</p>
+            <div style="text-align: center; line-height: 1.8;">
+                <p><strong>Location:</strong> Bohol, Philippines</p>
+                <p><strong>Partnerships:</strong> In coordination with local extension frameworks and organic standards.</p>
+            </div>
+        </section>
 
-    <a class="button" href="#contact">Join the Network</a>
-</section>
+    </div>
 
-<section id="contact" class="card">
-    <h2>📩 Contact</h2>
-    <p>Email: info@ggh-bohol.org</p>
-    <p>Green Gardens of Hope - Bohol, Philippines</p>
-</section>
-
-</div>
-
-<footer>
-    © 2026 Green Gardens of Hope | Bohol Heirloom Seed Conservation Network
-</footer>
+    <footer>
+        <p>&copy; 2026 Bohol Seed Network & Green Gardens of Hope Agriventures. All Rights Reserved.</p>
+        <p>Built for community-based agricultural sustainability.</p>
+    </footer>
 
 </body>
 </html>
