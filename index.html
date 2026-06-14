@@ -1,242 +1,307 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bohol Seed Network | Seed Sovereignty & Agricultural Innovation</title>
-    <style>
-        :root {
-            --primary: #2e7d32;
-            --primary-light: #e8f5e9;
-            --secondary: #8d6e63;
-            --dark: #263238;
-            --light: #f8f9fa;
+    <title>BOHOL PHILIPPINES HEIRLOOM SEED NETWORK</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Professional Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        agriGreen: {
+                            DEFAULT: '#2c5e3b',
+                            dark: '#1b3b24',
+                            light: '#a3b899'
+                        },
+                        earth: '#8b5a2b'
+                    }
+                }
+            }
         }
-        
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--dark);
-            background-color: var(--light);
-        }
-
-        header {
-            background-color: var(--primary);
-            color: white;
-            padding: 2rem 1rem;
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        header p {
-            font-size: 1.1rem;
-            font-style: italic;
-            opacity: 0.9;
-        }
-
-        nav {
-            background-color: #1b5e20;
-            padding: 0.5rem;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            margin: 0 0.25rem;
-            font-weight: bold;
-            display: inline-block;
-        }
-
-        nav a:hover {
-            background-color: var(--primary);
-            border-radius: 4px;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-
-        .hero {
-            background-color: var(--primary-light);
-            border-left: 5px solid var(--primary);
-            padding: 2rem;
-            border-radius: 8px;
-            margin-bottom: 2.5rem;
-        }
-
-        .hero h2 {
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2.5rem;
-        }
-
-        .card {
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border-top: 4px solid var(--primary);
-        }
-
-        .card h3 {
-            color: var(--primary);
-            margin-bottom: 1rem;
-            font-size: 1.4rem;
-        }
-
-        .img-placeholder {
-            background-color: #ddd;
-            width: 100%;
-            height: 200px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 4px;
-            margin-bottom: 1rem;
-            color: #666;
-            font-size: 0.9rem;
-            overflow: hidden;
-        }
-
-        .img-placeholder img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .badge {
-            background-color: var(--secondary);
-            color: white;
-            padding: 0.2rem 0.6rem;
-            font-size: 0.8rem;
-            border-radius: 4px;
-            display: inline-block;
-            margin-bottom: 0.5rem;
-        }
-
-        footer {
-            background-color: var(--dark);
-            color: white;
-            text-align: center;
-            padding: 2rem 1rem;
-            margin-top: 4rem;
-        }
-
-        footer p {
-            margin-bottom: 0.5rem;
-            font-size: 0.9rem;
-        }
-
-        @media (max-width: 600px) {
-            header h1 { font-size: 2rem; }
-            .grid { grid-template-columns: 1fr; }
-        }
-    </style>
+    </script>
 </head>
-<body>
+<body class="bg-stone-50 text-stone-800 font-sans leading-normal tracking-normal">
 
-    <header>
-        <h1>Bohol Seed Network</h1>
-        <p>Empowering Farmers through Seed Sovereignty & Agro-Ecological Innovations</p>
-    </header>
-
-    <nav>
-        <a href="#about">Our Mission</a>
-        <a href="#sovereignty">Seed Sovereignty</a>
-        <a href="#bioponics">Bioponics</a>
-        <a href="#soil">Soil Amendments</a>
-        <a href="#contact">Contact</a>
+    <!-- Top Navigation Bar -->
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur shadow-md border-b border-stone-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center space-x-3">
+                    <div class="bg-agriGreen text-white p-2.5 rounded-xl shadow-inner">
+                        <i class="fa-solid fa-seedling text-2xl"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl font-black tracking-tight text-agriGreen-dark block">BOHOL PHILIPPINES</span>
+                        <span class="text-xs uppercase tracking-widest text-stone-500 font-bold block -mt-1">HEIRLOOM SEED NETWORK</span>
+                    </div>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8 font-medium">
+                    <a href="#mission" class="text-stone-600 hover:text-agriGreen transition">Our Mission</a>
+                    <a href="#heirloom" class="text-stone-600 hover:text-agriGreen transition">Heirloom Seeds</a>
+                    <a href="#bioponics" class="text-stone-600 hover:text-agriGreen transition">Bioponics</a>
+                    <a href="#soil" class="text-stone-600 hover:text-agriGreen transition">Soil Amendments</a>
+                    <a href="#projects" class="text-stone-600 hover:text-agriGreen transition">Projects</a>
+                    <a href="#contact" class="bg-agriGreen text-white px-5 py-2.5 rounded-lg hover:bg-agriGreen-dark transition shadow-sm">Contact Us</a>
+                </div>
+            </div>
+        </div>
     </nav>
 
-    <div class="container">
-        
-        <section id="about" class="hero">
-            <h2>Advancing Sustainable Agriculture in Bohol</h2>
-            <p>The Bohol Seed Network is a community-driven initiative focused on developing resilient agricultural systems. Through strategic upcycling, localized seed libraries, and circular economy practices, we provide practical, tech-voc aligned training to ensure long-term food security and climate resilience for local farming communities.</p>
-        </section>
+    <!-- Hero / Landing Section -->
+    <header class="relative bg-gradient-to-br from-agriGreen-dark to-emerald-900 text-white py-24 px-4 overflow-hidden">
+        <div class="absolute inset-0 opacity-20 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1592417817098-8f3d6eb19675?auto=format&fit=crop&q=80&w=1200');"></div>
+        <div class="relative max-w-5xl mx-auto text-center space-y-6">
+            <span class="bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase">Preserving Agro-Biodiversity</span>
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight uppercase">Bohol Philippines <br><span class="text-amber-400">Heirloom Seed Network</span></h1>
+            <p class="text-lg md:text-xl text-stone-200 max-w-3xl mx-auto font-light">
+                Empowering communities across Bohol through local seed banking, climate-resilient bioponic farming technologies, and organic soil rehabilitation solutions.
+            </p>
+            <div class="pt-4 flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="#heirloom" class="w-full sm:w-auto bg-amber-600 hover:bg-amber-700 text-white font-semibold px-8 py-3.5 rounded-xl transition shadow-lg text-center">Explore Collection</a>
+                <a href="#mission" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white border border-white/30 font-semibold px-8 py-3.5 rounded-xl transition text-center backdrop-blur-sm">Learn Our Approach</a>
+            </div>
+        </div>
+    </header>
 
-        <section class="grid">
+    <!-- Section: Core Mission -->
+    <section id="mission" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+            <h2 class="text-xs uppercase tracking-widest text-amber-600 font-bold">Community Sovereignty</h2>
+            <p class="text-3xl md:text-4xl font-bold tracking-tight text-stone-900">The Seed Sovereignty Initiative</p>
+            <div class="w-16 h-1 bg-amber-600 mx-auto rounded-full mt-4"></div>
+        </div>
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6 text-stone-600 text-lg">
+                <p>
+                    True agricultural resilience begins with the seed. Our dedicated mission focuses on establishing a decentralized network of community-managed seed libraries to preserve culturally significant, open-pollinated heirloom vegetable varieties.
+                </p>
+                <p>
+                    By safeguarding genetic strains adapted to localized ecosystems, we decouple smallholder farms from chemical dependencies and external multinational corporate supply loops. We cultivate self-reliance directly from the soil up.
+                </p>
+                <div class="border-l-4 border-agriGreen pl-4 italic text-stone-800 bg-stone-100 py-3 pr-2 rounded-r-lg">
+                    "A community that does not control its seeds can never truly control its food security or its economic future."
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 text-center space-y-2">
+                    <i class="fa-solid fa-boxes-stacked text-3xl text-agriGreen"></i>
+                    <h3 class="font-bold text-stone-900 block pt-2">Seed Library</h3>
+                    <p class="text-sm text-stone-500">Decentralized municipal germplasm preservation.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 text-center space-y-2">
+                    <i class="fa-solid fa-graduation-cap text-3xl text-agriGreen"></i>
+                    <h3 class="font-bold text-stone-900 block pt-2">Capacity Training</h3>
+                    <p class="text-sm text-stone-500">Certified standard vegetable seed production tracks.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 text-center space-y-2">
+                    <i class="fa-solid fa-shield-halved text-3xl text-agriGreen"></i>
+                    <h3 class="font-bold text-stone-900 block pt-2">Agro-Ecology</h3>
+                    <p class="text-sm text-stone-500">Participatory guarantee frameworks and organic standards.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 text-center space-y-2">
+                    <i class="fa-solid fa-dna text-3xl text-agriGreen"></i>
+                    <h3 class="font-bold text-stone-900 block pt-2">Genetic Heritage</h3>
+                    <p class="text-sm text-stone-500">Protecting vulnerable native open-pollinated flora lines.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Heirloom Seed Collection -->
+    <section id="heirloom" class="bg-stone-100 py-20 border-y border-stone-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <h2 class="text-xs uppercase tracking-widest text-agriGreen font-bold">Preserved Strains</h2>
+                <p class="text-3xl md:text-4xl font-bold tracking-tight text-stone-900">Heirloom Vegetable Collections</p>
+                <div class="w-16 h-1 bg-agriGreen mx-auto rounded-full mt-4"></div>
+            </div>
             
-            <!-- Section 1: Seed Sovereignty -->
-            <div id="sovereignty" class="card">
-                <div class="img-placeholder">
-                    <!-- Replace 'seeds.jpg' with your uploaded image filename -->
-                    <img src="seeds.jpg" alt="Heirloom vegetable seeds saved in jars">
+            <div class="mb-8 rounded-2xl overflow-hidden shadow-md bg-white">
+                <img src="https://shegrowsveg.com/wp-content/uploads/2024/10/DSF1627-scaled-e1728642769788-2048x1638-1.jpg" alt="Diverse collection of handpicked heirloom vegetables and native plant profiles" class="w-full h-80 object-cover">
+                <div class="p-6 bg-white border-t border-stone-100">
+                    <p class="text-stone-600 text-sm italic">Our active catalog includes resilient, non-hybridized selections curated for optimal performance in regional microclimates without requiring chemical interventions.</p>
                 </div>
-                <span class="badge">Community-Led</span>
-                <h3>Seed Sovereignty</h3>
-                <p>We are dedicated to safeguarding genetic diversity by establishing municipal seed libraries. By preserving heirloom and open-pollinated vegetable varieties, we protect local farmers from seed dependency and reinforce regional agricultural resilience.</p>
-                <br>
-                <p><strong>Focus Area:</strong> Vegetable Seed Production NC III standards and regional adaptation.</p>
             </div>
 
-            <!-- Section 2: Bioponics -->
-            <div id="bioponics" class="card">
-                <div class="img-placeholder">
-                    <!-- Replace 'bioponics.jpg' with your uploaded image filename -->
-                    <img src="bioponics.jpg" alt="Bioponic growing system using upcycled vessels">
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Seed Card 1 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-stone-200 overflow-hidden hover:shadow-md transition">
+                    <div class="p-6 space-y-3">
+                        <span class="text-xs font-bold text-amber-600 tracking-wider uppercase bg-amber-50 px-2.5 py-1 rounded">Solanaceae Strain</span>
+                        <h3 class="text-xl font-bold text-stone-900">Native Varieties</h3>
+                        <p class="text-stone-600 text-sm">Adaptive regional variants selected for high heat tolerances, native insect barriers, and distinct structural profiles.</p>
+                    </div>
                 </div>
-                <span class="badge">Strategic Upcycling</span>
-                <h3>Bioponic Succession Systems</h3>
-                <p>Our low-cost, stagnant bioponic models are designed specifically for non-electric, rural, and resource-limited spaces. We creatively upcycle post-consumer plastics into high-performance cultivation vessels that utilize organic, biologically active nutrient mixtures.</p>
-                <br>
-                <p><strong>Focus Area:</strong> Affordable, zero-electricity hydroponics using organic-based inputs.</p>
-            </div>
-
-            <!-- Section 3: Organic Soil Amendments -->
-            <div id="soil" class="card">
-                <div class="img-placeholder">
-                    <!-- Replace 'biochar.jpg' with your uploaded image filename -->
-                    <img src="biochar.jpg" alt="Dark organic compost and biochar substrate">
+                <!-- Seed Card 2 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-stone-200 overflow-hidden hover:shadow-md transition">
+                    <div class="p-6 space-y-3">
+                        <span class="text-xs font-bold text-emerald-600 tracking-wider uppercase bg-emerald-50 px-2.5 py-1 rounded">Leguminosae Strain</span>
+                        <h3 class="text-xl font-bold text-stone-900">Indigenous Legumes</h3>
+                        <p class="text-stone-600 text-sm">Heirloom field beans and climbing varieties optimized for vertical cropping integration and natural atmospheric nitrogen-fixing properties.</p>
+                    </div>
                 </div>
-                <span class="badge">Circular Economy</span>
-                <h3>Biochar & Soil Amendments</h3>
-                <p>We actively combat agricultural waste by processing municipal and farm bio-waste into rich, biochar-enriched organic soil amendments. This system builds long-term soil microbiology, increases soil water retention, and locks carbon into the earth.</p>
-                <br>
-                <p><strong>Focus Area:</strong> Repurposing bio-waste substrates for sustainable crop production.</p>
+                <!-- Seed Card 3 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-stone-200 overflow-hidden hover:shadow-md transition">
+                    <div class="p-6 space-y-3">
+                        <span class="text-xs font-bold text-indigo-600 tracking-wider uppercase bg-indigo-50 px-2.5 py-1 rounded">Cucurbitaceae Strain</span>
+                        <h3 class="text-xl font-bold text-stone-900">Traditional Cucurbits</h3>
+                        <p class="text-stone-600 text-sm">Resilient native squashes and climbing gourds showcasing exceptional shelf-lives and natural defense traits against localized downy mildews.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Bioponics Technology -->
+    <section id="bioponics" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="order-2 md:order-1 rounded-2xl overflow-hidden shadow-lg border border-stone-200 bg-white p-4">
+                <img src="https://www.mdpi.com/agronomy/agronomy-13-01436/article_deploy/html/images/agronomy-13-01436-g002.png" alt="Technical diagram outlining bioponic cycling and sustainable biological filtration systems" class="w-full rounded-xl">
+            </div>
+            <div class="space-y-6 order-1 md:order-2">
+                <span class="text-xs uppercase tracking-widest text-emerald-600 font-bold">Non-Electric Hydroponic Successions</span>
+                <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-stone-900">The Bioponic System</h2>
+                <div class="w-16 h-1 bg-emerald-600 rounded-full my-4"></div>
+                <p class="text-stone-600 text-lg">
+                    Bioponics bridges the structural control of soil-free hydroponics with the complex microbiological health of traditional organic soil cultivation. 
+                </p>
+                <p class="text-stone-600 text-lg">
+                    Engineered precisely to perform without continuous electrical dependencies, our non-electric, stagnant bioponic succession blueprints prioritize strategic upcycling. By repurposing common consumer plastics into specialized cultivation vessels, we dramatically drop infrastructure entry costs for family units.
+                </p>
+                <ul class="space-y-3 font-medium text-stone-700">
+                    <li class="flex items-center space-x-3">
+                        <i class="fa-solid fa-circle-check text-emerald-600 text-xl"></i>
+                        <span>Zero electricity consumption inputs required</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <i class="fa-solid fa-circle-check text-emerald-600 text-xl"></i>
+                        <span>Upcycled post-consumer vessels and infrastructure</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <i class="fa-solid fa-circle-check text-emerald-600 text-xl"></i>
+                        <span>Organic nutrient arrays driven by localized biology</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Soil Amendments -->
+    <section id="soil" class="bg-stone-900 text-stone-100 py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <span class="text-xs uppercase tracking-widest text-amber-500 font-bold">Circular Waste Management</span>
+                    <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white">Biochar-Enriched Organic Soil Amendments</h2>
+                    <div class="w-16 h-1 bg-amber-500 rounded-full my-4"></div>
+                    <p class="text-stone-400 text-lg">
+                        Our circular economy initiatives focus heavily on processing municipal and agricultural bio-wastes into high-performance structural substrates. 
+                    </p>
+                    <p class="text-stone-400 text-lg">
+                        By integrating specialized pyrolyzed biochar structures into our organic compost transformations, we construct durable soil amendments that stabilize vital micro-nutrients, optimize water retention metrics, and permanently lock carbon deep into farm topsoils.
+                    </p>
+                    <div class="p-4 bg-white/5 rounded-xl border border-white/10 space-y-2">
+                        <span class="text-amber-400 font-bold text-sm block"><i class="fa-solid fa-circle-nodes mr-2"></i>Microbiological Housing</span>
+                        <p class="text-stone-400 text-sm">The highly porous internal architecture of biochar provides permanent physical shelter for beneficial mycorrhizal networks and nitrogen-fixing bacteria.</p>
+                    </div>
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-2xl border border-stone-800">
+                    <img src="https://cdn.mos.cms.futurecdn.net/JJmvrUJFFMNNoTaGGrij5W.jpg" alt="Rich black biochar used on a gardening trowel to rehabilitate topsoil fertility metrics" class="w-full h-96 object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: New Projects -->
+    <section id="projects" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+            <h2 class="text-xs uppercase tracking-widest text-agriGreen font-bold">Research & Development</h2>
+            <p class="text-3xl md:text-4xl font-bold tracking-tight text-stone-900">Active Strategic Initiatives</p>
+            <div class="w-16 h-1 bg-agriGreen mx-auto rounded-full mt-4"></div>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Project 1 -->
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-200 hover:border-emerald-600/30 transition flex flex-col justify-between">
+                <div class="space-y-4">
+                    <div class="inline-flex items-center space-x-2 text-xs font-bold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                        <span>Active Implementation Track</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-stone-900">Biochar Soil Viability Extension</h3>
+                    <p class="text-stone-600">
+                        A structured development project investigating the deployment scaling, tracking mechanics, and crop performance metrics of carbon-retaining biochar amendments across regional cooperative farms.
+                    </p>
+                </div>
+                <div class="mt-6 pt-6 border-t border-stone-100 flex justify-between items-center text-sm font-semibold text-stone-500">
+                    <span>Target: Soil Rehabilitation</span>
+                    <span class="text-agriGreen"><i class="fa-solid fa-arrow-right"></i></span>
+                </div>
             </div>
 
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="card" style="border-top-color: var(--secondary); max-width: 600px; margin: 0 auto;">
-            <h3 style="color: var(--secondary); text-align: center;">Collaborate With Us</h3>
-            <p style="text-align: center; margin-bottom: 1.5rem;">Are you an agricultural innovator, local government unit, or smallholder farmer looking to build sustainable community models? Let's connect.</p>
-            <div style="text-align: center; line-height: 1.8;">
-                <p><strong>Location:</strong> Bohol, Philippines</p>
-                <p><strong>Partnerships:</strong> In coordination with local extension frameworks and organic standards.</p>
+            <!-- Project 2 -->
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-200 hover:border-amber-600/30 transition flex flex-col justify-between">
+                <div class="space-y-4">
+                    <div class="inline-flex items-center space-x-2 text-xs font-bold text-amber-700 bg-amber-50 px-3 py-1 rounded-full">
+                        <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+                        <span>Community Deployment Track</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-stone-900">Municipal Technology Transfer Framework</h3>
+                    <p class="text-stone-600">
+                        Systematic training syllabus delivery and practical demonstration models establishing standardized seed-saving competencies and bioponic modules across rural barangay units.
+                    </p>
+                </div>
+                <div class="mt-6 pt-6 border-t border-stone-100 flex justify-between items-center text-sm font-semibold text-stone-500">
+                    <span>Target: Knowledge Exchange</span>
+                    <span class="text-amber-600"><i class="fa-solid fa-arrow-right"></i></span>
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-    </div>
+    <!-- Section: Contact & Footer -->
+    <section id="contact" class="bg-stone-100 border-t border-stone-200 py-16">
+        <div class="max-w-4xl mx-auto px-4 text-center space-y-8">
+            <div class="space-y-3">
+                <h2 class="text-3xl font-bold tracking-tight text-stone-900">Connect With Our Network</h2>
+                <p class="text-stone-600 max-w-xl mx-auto">
+                    Interested in seed accessions, training schedules, technology blueprints, or professional project partnerships? Reach out directly.
+                </p>
+            </div>
+            
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-200 grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto text-left">
+                <div class="flex items-start space-x-4">
+                    <div class="text-agriGreen text-2xl pt-1">
+                        <i class="fa-solid fa-building-flag"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-stone-900">Headquarters</h4>
+                        <p class="text-sm text-stone-500 mt-1">Bohol Philippines Heirloom Seed Network<br>Bohol, Philippines</p>
+                    </div>
+                </div>
+                <div class="flex items-start space-x-4">
+                    <div class="text-agriGreen text-2xl pt-1">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-stone-900">Digital Access</h4>
+                        <p class="text-sm text-stone-500 mt-1">GitHub Organization Portal<br>gghheirloom@gmail.com</p>
+                    </div>
+                </div>
+            </div>
 
-    <footer>
-        <p>&copy; 2026 Bohol Seed Network & Green Gardens of Hope Agriventures. All Rights Reserved.</p>
-        <p>Built for community-based agricultural sustainability.</p>
-    </footer>
+            <div class="pt-8 text-xs text-stone-400 space-y-2 border-t border-stone-200">
+                <p>&copy; 2026 BOHOL PHILIPPINES HEIRLOOM SEED NETWORK. All Rights Reserved.</p>
+                <p>Engineered for ecological preservation and community self-reliance networks.</p>
+            </div>
+        </div>
+    </section>
 
 </body>
 </html>
