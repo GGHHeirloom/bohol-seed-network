@@ -115,55 +115,63 @@
     </section>
 
     <!-- Section: Heirloom Seed Collection -->
-    <section id="heirloom" class="bg-stone-100 py-20 border-y border-stone-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
-                <h2 class="text-xs uppercase tracking-widest text-agriGreen font-bold">Preserved Strains</h2>
-                <p class="text-3xl md:text-4xl font-bold tracking-tight text-stone-900">Heirloom Vegetable Collections</p>
-                <div class="w-16 h-1 bg-agriGreen mx-auto rounded-full mt-4"></div>
-            </div>
-            
-            <div class="mb-8 rounded-2xl overflow-hidden shadow-md bg-white">
-                <img src="https://shegrowsveg.com/wp-content/uploads/2024/10/DSF1627-scaled-e1728642769788-2048x1638-1.jpg" alt="Diverse collection of handpicked heirloom vegetables and native plant profiles" class="w-full h-80 object-cover">
-                <div class="p-6 bg-white border-t border-stone-100 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-                    <p class="text-stone-600 text-sm italic">Our active catalog includes resilient, non-hybridized selections curated for optimal performance in regional microclimates without requiring chemical interventions.</p>
-                    <!-- UPDATED PATH FOR FOLDER STRUCTURE -->
-                    <a href="catalogs/seed-catalog.pdf" target="_blank" class="shrink-0 text-center bg-agriGreen hover:bg-agriGreen-dark text-white text-xs font-bold px-4 py-2 rounded-lg transition shadow-sm flex items-center justify-center space-x-2">
-                        <i class="fa-solid fa-download"></i>
-                        <span>Download Full Registry</span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Seed Card 1 -->
-                <div class="bg-white rounded-2xl shadow-sm border border-stone-200 overflow-hidden hover:shadow-md transition">
-                    <div class="p-6 space-y-3">
-                        <span class="text-xs font-bold text-amber-600 tracking-wider uppercase bg-amber-50 px-2.5 py-1 rounded">Solanaceae Strain</span>
-                        <h3 class="text-xl font-bold text-stone-900">Native Varieties</h3>
-                        <p class="text-stone-600 text-sm">Adaptive regional variants selected for high heat tolerances, native insect barriers, and distinct structural profiles.</p>
-                    </div>
-                </div>
-                <!-- Seed Card 2 -->
-                <div class="bg-white rounded-2xl shadow-sm border border-stone-200 overflow-hidden hover:shadow-md transition">
-                    <div class="p-6 space-y-3">
-                        <span class="text-xs font-bold text-emerald-600 tracking-wider uppercase bg-emerald-50 px-2.5 py-1 rounded">Leguminosae Strain</span>
-                        <h3 class="text-xl font-bold text-stone-900">Indigenous Legumes</h3>
-                        <p class="text-stone-600 text-sm">Heirloom field beans and climbing varieties optimized for vertical cropping integration and natural atmospheric nitrogen-fixing properties.</p>
-                    </div>
-                </div>
-                <!-- Seed Card 3 -->
-                <div class="bg-white rounded-2xl shadow-sm border border-stone-200 overflow-hidden hover:shadow-md transition">
-                    <div class="p-6 space-y-3">
-                        <span class="text-xs font-bold text-indigo-600 tracking-wider uppercase bg-indigo-50 px-2.5 py-1 rounded">Cucurbitaceae Strain</span>
-                        <h3 class="text-xl font-bold text-stone-900">Traditional Cucurbits</h3>
-                        <p class="text-stone-600 text-sm">Resilient native squashes and climbing gourds showcasing exceptional shelf-lives and natural defense traits against localized downy mildews.</p>
-                    </div>
-                </div>
+    
+<!-- ================= HEIRLOOM SEED SECTION ================= -->
+<section id="heirloom">
+    <div>
+        <div>
+            <h2>Preserved Strains</h2>
+            <p>Heirloom Vegetable Collections</p>
+            <div class="line-divider"></div>
+        </div>
+        
+        <div class="catalog-header">
+            <!-- This is your main hero image banner -->
+            <img alt="Diverse collection of handpicked heirloom vegetables and native plant profiles" src="images/main-collection-hero.jpg">
+            <div>
+                <p>Our active catalog includes resilient, non-hybridized selections curated for optimal performance in regional microclimates without requiring chemical interventions.</p>
+                <a href="catalogs/seed-catalog.pdf" target="_blank">
+                    <i></i>
+                    <span>Download Full Registry</span>
+                </a>
             </div>
         </div>
-    </section>
 
+        <div class="strains-grid">
+            
+            <!-- CARD 1: SOLANACEAE -->
+            <div class="strain-card">
+                <img alt="Native Solanaceae Strain - Heat Armor" src="images/solanaceae-strain.jpg" style="width:100%; height:200px; object-fit:cover; border-radius:4px;">
+                <div class="card-content">
+                    <span class="category-tag">Solanaceae Strain</span>
+                    <h3>Native Varieties (Heat Armor)</h3>
+                    <p>Ultra-resilient nightshades selected for exceptional heat tolerance and natural pest barriers. Featuring robust stalk profiles and thickened cuticles, these native landrace peppers, eggplants, and tomatoes are bred to withstand extreme weather shocks while delivering heavy, high-flavor yields without intensive chemical inputs.</p>
+                </div>
+            </div>
+            
+            <!-- CARD 2: LEGUMINOSAE -->
+            <div class="strain-card">
+                <img alt="Indigenous Leguminosae Strain - Living Nitrogen" src="images/leguminosae-strain.jpg" style="width:100%; height:200px; object-fit:cover; border-radius:4px;">
+                <div class="card-content">
+                    <span class="category-tag">Leguminosae Strain</span>
+                    <h3>Indigenous Legumes (Living Nitrogen)</h3>
+                    <p>High-vigor heirloom field beans and climbing varieties optimized for vertical polyculture. These indigenous legumes feature hyper-efficient root-nodule symbiosis, pulling atmospheric nitrogen down to naturally feed your soil while maximizing vertical space with aggressive vining habits and heavy, protein-rich yields.</p>
+                </div>
+            </div>
+            
+            <!-- CARD 3: CUCURBITACEAE -->
+            <div class="strain-card">
+                <img alt="Traditional Cucurbitaceae Strain - Living Mulch" src="images/cucurbitaceae-strain.jpg" style="width:100%; height:200px; object-fit:cover; border-radius:4px;">
+                <div class="card-content">
+                    <span class="category-tag">Cucurbitaceae Strain</span>
+                    <h3>Traditional Cucurbits (Living Mulch)</h3>
+                    <p>Traditional, deep-rooted squashes and melons engineered for total ground-cover dominance. Their massive fan leaves form a living canopy that traps soil moisture and suppresses weeds, while extensive taproot networks lock in drought-hardy vigor and concentrate rich, ancient flavor profiles into every fruit.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
     <!-- Section: Bioponics Technology -->
     <section id="bioponics" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid md:grid-cols-2 gap-12 items-center">
