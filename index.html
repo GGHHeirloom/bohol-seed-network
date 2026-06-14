@@ -3,255 +3,278 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BOHOL Philippines HEIRLOOM SEED NETWORK | Seed Sovereignty & Agricultural Innovation</title>
+    <title>Bohol Philippines Heirloom Seed Network</title>
+    <!-- Tailwind CSS for modern, responsive layout styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for clean iconography -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts for an elegant editorial look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme {
+                extend {
+                    colors {
+                        earthGreen: '#1e3f20',
+                        warmClay: '#c86b45',
+                        riceGold: '#dfa844',
+                        paleSand: '#f9f6f0',
+                    },
+                    fontFamily {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
     <style>
-        :root {
-            --primary: #2e7d32;
-            --primary-light: #e8f5e9;
-            --secondary: #8d6e63;
-            --dark: #263238;
-            --light: #f8f9fa;
-        }
-        
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--dark);
-            background-color: var(--light);
-            scroll-behavior: smooth;
-        }
-
-        header {
-            background-color: var(--primary);
-            color: white;
-            padding: 2.5rem 1rem;
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        header p {
-            font-size: 1.1rem;
-            font-style: italic;
-            opacity: 0.9;
-        }
-
-        nav {
-            background-color: #1b5e20;
-            padding: 0.5rem;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            margin: 0 0.25rem;
-            font-weight: bold;
-            display: inline-block;
-        }
-
-        nav a:hover {
-            background-color: var(--primary);
-            border-radius: 4px;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-
-        .hero {
-            background-color: var(--primary-light);
-            border-left: 5px solid var(--primary);
-            padding: 2rem;
-            border-radius: 8px;
-            margin-bottom: 2.5rem;
-        }
-
-        .hero h2 {
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2.5rem;
-        }
-
-        .card {
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border-top: 4px solid var(--primary);
-        }
-
-        .card h3 {
-            color: var(--primary);
-            margin-bottom: 1rem;
-            font-size: 1.4rem;
-        }
-
-        .img-placeholder {
-            background-color: #ddd;
-            width: 100%;
-            height: 200px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 4px;
-            margin-bottom: 1rem;
-            color: #666;
-            font-size: 0.9rem;
-            overflow: hidden;
-        }
-
-        .img-placeholder img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .badge {
-            background-color: var(--secondary);
-            color: white;
-            padding: 0.2rem 0.6rem;
-            font-size: 0.8rem;
-            border-radius: 4px;
-            display: inline-block;
-            margin-bottom: 0.5rem;
-        }
-
-        footer {
-            background-color: var(--dark);
-            color: white;
-            text-align: center;
-            padding: 2rem 1rem;
-            margin-top: 4rem;
-        }
-
-        footer p {
-            margin-bottom: 0.5rem;
-            font-size: 0.9rem;
-        }
-
-        @media (max-width: 600px) {
-            header h1 { font-size: 1.8rem; }
-            .grid { grid-template-columns: 1fr; }
-            nav a { padding: 0.4rem 0.5rem; font-size: 0.9rem; }
-        }
+        html { scroll-behavior: smooth; }
     </style>
 </head>
-<body>
+<body class="font-sans bg-paleSand text-zinc-800 antialiased">
 
-    <header>
-        <h1>BOHOL Philippines HEIRLOOM SEED NETWORK</h1>
-        <p>Empowering Farmers through Seed Sovereignty & Agro-Ecological Innovations</p>
-    </header>
-
-    <nav>
-        <a href="#about">Our Mission</a>
-        <a href="#heirloom">Heirloom Seeds</a>
-        <a href="#sovereignty">Seed Sovereignty</a>
-        <a href="#bioponics">Bioponics</a>
-        <a href="#soil">Soil Amendments</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
-    <div class="container">
-        
-        <section id="about" class="hero">
-            <h2>Advancing Sustainable Agriculture in Bohol</h2>
-            <p>The Bohol Seed Network is a community-driven initiative focused on developing resilient agricultural systems. Through strategic upcycling, localized seed libraries, and circular economy practices, we provide practical, tech-voc aligned training to ensure long-term food security and climate resilience for local farming communities.</p>
-        </section>
-
-        <section class="grid">
-            
-            <!-- Section 1: Heirloom Seeds Collection -->
-            <div id="heirloom" class="card" style="border-top-color: var(--secondary);">
-                <div class="img-placeholder">
-                    <!-- Replace 'heirloom.jpg' with your uploaded image filename -->
-                    <img src="heirloom.jpg" alt="Traditional and heritage open-pollinated vegetable seeds">
-                </div>
-                <span class="badge" style="background-color: var(--primary);">Genetic Heritage</span>
-                <h3>Heirloom Seeds</h3>
-                <p>We actively scout, catalogue, and propagate native, open-pollinated vegetable varieties unique to our region. These heritage seeds carry natural generational resilience against local pests and climate fluctuations, serving as a biological foundation for regional nutrition.</p>
-                <br>
-                <p><strong>Focus Area:</strong> Native crop classification, multiplication, and community seed distribution maps.</p>
-            </div>
-            
-            <!-- Section 2: Seed Sovereignty -->
-            <div id="sovereignty" class="card">
-                <div class="img-placeholder">
-                    <!-- Replace 'seeds.jpg' with your uploaded image filename -->
-                    <img src="seeds.jpg" alt="Heirloom vegetable seeds saved in jars">
-                </div>
-                <span class="badge">Community-Led</span>
-                <h3>Seed Sovereignty</h3>
-                <p>We are dedicated to safeguarding genetic diversity by establishing municipal seed libraries. By preserving heirloom and open-pollinated vegetable varieties, we protect local farmers from seed dependency and reinforce regional agricultural resilience.</p>
-                <br>
-                <p><strong>Focus Area:</strong> Vegetable Seed Production NC III standards and regional adaptation.</p>
-            </div>
-
-            <!-- Section 3: Bioponics -->
-            <div id="bioponics" class="card">
-                <div class="img-placeholder">
-                    <!-- Replace 'bioponics.jpg' with your uploaded image filename -->
-                    <img src="bioponics.jpg" alt="Bioponic growing system using upcycled vessels">
-                </div>
-                <span class="badge">Strategic Upcycling</span>
-                <h3>Bioponic Succession Systems</h3>
-                <p>Our low-cost, stagnant bioponic models are designed specifically for non-electric, rural, and resource-limited spaces. We creatively upcycle post-consumer plastics into high-performance cultivation vessels that utilize organic, biologically active nutrient mixtures.</p>
-                <br>
-                <p><strong>Focus Area:</strong> Affordable, zero-electricity hydroponics using organic-based inputs.</p>
-            </div>
-
-            <!-- Section 4: Organic Soil Amendments -->
-            <div id="soil" class="card">
-                <div class="img-placeholder">
-                    <!-- Replace 'biochar.jpg' with your uploaded image filename -->
-                    <img src="biochar.jpg" alt="Dark organic compost and biochar substrate">
-                </div>
-                <span class="badge">Circular Economy</span>
-                <h3>Biochar & Soil Amendments</h3>
-                <p>We actively combat agricultural waste by processing municipal and farm bio-waste into rich, biochar-enriched organic soil amendments. This system builds long-term soil microbiology, increases soil water retention, and locks carbon into the earth.</p>
-                <br>
-                <p><strong>Focus Area:</strong> Repurposing bio-waste substrates for sustainable crop production.</p>
-            </div>
-
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="card" style="border-top-color: var(--secondary); max-width: 600px; margin: 0 auto;">
-            <h3 style="color: var(--secondary); text-align: center;">Collaborate With Us</h3>
-            <p style="text-align: center; margin-bottom: 1.5rem;">Are you an agricultural innovator, local government unit, or smallholder farmer looking to build sustainable community models? Let's connect.</p>
-            <div style="text-align: center; line-height: 1.8;">
-                <p><strong>Location:</strong> Bohol, Philippines</p>
-                <p><strong>Partnerships:</strong> In coordination with local extension frameworks and organic standards.</p>
-            </div>
-        </section>
-
+    <!-- TOP ANNOUNCEMENT BAR -->
+    <div class="bg-earthGreen text-paleSand text-center py-2 px-4 text-xs tracking-wider uppercase font-medium border-b border-white/10">
+        🌱 Preserving Bohol’s Agricultural Heritage for Future Generations
     </div>
 
-    <footer>
-        <p>&copy; 2026 Bohol Seed Network & Green Gardens of Hope Agriventures. All Rights Reserved.</p>
-        <p>Built for community-based agricultural sustainability.</p>
+    <!-- NAVIGATION HEADER -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-zinc-100">
+        <div class="max-w-7xl px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between mx-auto">
+            <a href="#" class="flex items-center gap-3">
+                <span class="text-2xl">🌾</span>
+                <div>
+                    <span class="block font-serif text-lg font-bold tracking-tight text-earthGreen leading-none">BOHOL HEIRLOOM</span>
+                    <span class="text-xs uppercase tracking-widest text-warmClay font-semibold">Seed Network</span>
+                </div>
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-600">
+                <a href="#about" class="hover:text-earthGreen transition-colors">Our Mission</a>
+                <a href="#seeds" class="hover:text-earthGreen transition-colors">The Vault</a>
+                <a href="#join" class="hover:text-earthGreen transition-colors">Get Involved</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <a href="#seeds" class="bg-warmClay hover:bg-amber-800 text-white px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase shadow-md transition-all">
+                    Explore Seeds
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO BANNER -->
+    <section class="relative bg-earthGreen text-white py-24 lg:py-32 overflow-hidden">
+        <!-- Decorative Background Layer -->
+        <div class="absolute inset-0 opacity-10 mix-blend-overlay pointer-events-none">
+            <div class="absolute inset-0 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        </div>
+        
+        <div class="relative max-w-5xl mx-auto px-4 text-center">
+            <span class="inline-block text-riceGold font-semibold uppercase tracking-widest text-xs mb-4 px-3 py-1 bg-white/5 rounded-full border border-white/10">
+                Food Sovereignty & Biodiversity
+            </span>
+            <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-black mb-6 leading-tight max-w-4xl mx-auto">
+                Guarding the Sacred Ancestral Seeds of Bohol
+            </h1>
+            <p class="text-zinc-300 text-lg sm:text-xl max-w-2xl mx-auto mb-10 font-light leading-relaxed">
+                We are a grassroots movement of Boholano farmers, seed savers, and cultural keepers dedicated to preserving open-pollinated, traditional varieties from across our island province.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="#seeds" class="w-full sm:w-auto bg-riceGold hover:bg-amber-500 text-earthGreen px-8 py-4 rounded-xl font-bold tracking-wide transition-all shadow-lg text-center">
+                    Browse Seed Collection
+                </a>
+                <a href="#about" class="w-full sm:w-auto border border-white/30 hover:border-white/80 text-white px-8 py-4 rounded-xl font-medium tracking-wide transition-all text-center">
+                    Learn Our Story
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- MISSION & PHILOSOPHY (The "Alliance of Native Seed Keepers" Core Concept) -->
+    <section id="about" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-5 space-y-4">
+                <span class="text-xs uppercase font-bold tracking-widest text-warmClay block">Why We Save Seeds</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-earthGreen leading-tight">
+                    More Than Conservation— This is a Revolution of the Soil.
+                </h2>
+                <div class="w-20 h-1 bg-riceGold rounded"></div>
+            </div>
+            <div class="lg:col-span-7">
+                <p class="text-zinc-600 text-lg leading-relaxed mb-6">
+                    Just like the ancient traditional practices across indigenous lands, Bohol's agricultural wealth doesn't lie in industrial lab-made hybrids, but in the resilient genetic heritage passed down by our ancestors. 
+                </p>
+                <p class="text-zinc-600 text-lg leading-relaxed">
+                    By keeping these open-pollinated strains alive, we guard our local food sovereignty against corporate monopolies, adapt natively to shifting climates, and honor the deep spiritual bond connecting the Boholano farmer to the land.
+                </p>
+            </div>
+        </div>
+
+        <!-- Core Values Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-zinc-100 hover:shadow-md transition-shadow">
+                <div class="w-12 h-12 bg-paleSand text-warmClay flex items-center justify-center rounded-xl text-xl font-bold mb-6">🇵🇭</div>
+                <h3 class="font-serif text-xl font-bold text-earthGreen mb-3">100% Native & Adaptive</h3>
+                <p class="text-zinc-600 text-sm leading-relaxed">Seeds natively acclimated to Bohol’s limestone soils, monsoonal weather rhythms, and localized biodiversity ecosystems.</p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-zinc-100 hover:shadow-md transition-shadow">
+                <div class="w-12 h-12 bg-paleSand text-warmClay flex items-center justify-center rounded-xl text-xl font-bold mb-6">🧬</div>
+                <h3 class="font-serif text-xl font-bold text-earthGreen mb-3">Genetically Pure Heirlooms</h3>
+                <p class="text-zinc-600 text-sm leading-relaxed">Strictly open-pollinated, non-hybridized, and completely GMO-free varieties guarded cleanly across generational family handovers.</p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-zinc-100 hover:shadow-md transition-shadow">
+                <div class="w-12 h-12 bg-paleSand text-warmClay flex items-center justify-center rounded-xl text-xl font-bold mb-6">🤝</div>
+                <h3 class="font-serif text-xl font-bold text-earthGreen mb-3">Community Custodianship</h3>
+                <p class="text-zinc-600 text-sm leading-relaxed">We operate on a shared exchange pool network. Farmers grow, save, swap, and return seeds back cleanly to the collective library.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- HEIRLOOM SEED VAULT / CATAL0G -->
+    <section id="seeds" class="bg-zinc-900 text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs uppercase font-bold tracking-widest text-riceGold block mb-2">The Biological Treasure of Bohol</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold">Featured Heirloom Strains</h2>
+                <p class="text-zinc-400 mt-4">These varieties have been meticulously rescued, multiplied, and adapted across decades by Bohol’s native seed keepers.</p>
+            </div>
+
+            <!-- Seed Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Seed Item 1 -->
+                <div class="bg-zinc-800 rounded-2xl border border-zinc-700/60 overflow-hidden flex flex-col justify-between group">
+                    <div class="p-6 sm:p-8">
+                        <div class="flex justify-between items-start gap-4 mb-4">
+                            <div>
+                                <span class="text-xs uppercase text-riceGold tracking-widest font-semibold">Tubers / Root Crops</span>
+                                <h3 class="font-serif text-2xl font-bold mt-1 group-hover:text-riceGold transition-colors">Ubi Kinampay</h3>
+                            </div>
+                            <span class="bg-zinc-700 px-2.5 py-1 rounded text-xs font-mono tracking-tight text-zinc-300">Extremely Rare</span>
+                        </div>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                            The legendary sacred purple yam of Bohol. Known for its distinct exquisite aroma and deep violet flesh, historically revered in local cultural heritage rituals.
+                        </p>
+                    </div>
+                    <div class="p-6 bg-zinc-900/50 border-t border-zinc-700/40 flex justify-between items-center">
+                        <span class="text-xs text-zinc-500 font-medium">Origin: Jagna & Mabini, Bohol</span>
+                        <button class="text-xs font-bold uppercase tracking-wider text-white hover:text-riceGold transition-all flex items-center gap-1">
+                            Request Seeds <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Seed Item 2 -->
+                <div class="bg-zinc-800 rounded-2xl border border-zinc-700/60 overflow-hidden flex flex-col justify-between group">
+                    <div class="p-6 sm:p-8">
+                        <div class="flex justify-between items-start gap-4 mb-4">
+                            <div>
+                                <span class="text-xs uppercase text-riceGold tracking-widest font-semibold">Grains / Maize</span>
+                                <h3 class="font-serif text-2xl font-bold mt-1 group-hover:text-riceGold transition-colors">Calape Native Corn</h3>
+                            </div>
+                            <span class="bg-emerald-950 text-emerald-400 border border-emerald-800 px-2.5 py-1 rounded text-xs font-mono tracking-tight">Stable Supply</span>
+                        </div>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                            A rugged, open-pollinated white flint corn heavily resilient against pests and dry island microclimates. Traditionally milled into staple rice-corn grits.
+                        </p>
+                    </div>
+                    <div class="p-6 bg-zinc-900/50 border-t border-zinc-700/40 flex justify-between items-center">
+                        <span class="text-xs text-zinc-500 font-medium">Origin: Calape, Bohol</span>
+                        <button class="text-xs font-bold uppercase tracking-wider text-white hover:text-riceGold transition-all flex items-center gap-1">
+                            Request Seeds <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Seed Item 3 -->
+                <div class="bg-zinc-800 rounded-2xl border border-zinc-700/60 overflow-hidden flex flex-col justify-between group">
+                    <div class="p-6 sm:p-8">
+                        <div class="flex justify-between items-start gap-4 mb-4">
+                            <div>
+                                <span class="text-xs uppercase text-riceGold tracking-widest font-semibold">Vegetables / Legumes</span>
+                                <h3 class="font-serif text-2xl font-bold mt-1 group-hover:text-riceGold transition-colors">Boholano String Bean</h3>
+                            </div>
+                            <span class="bg-zinc-700 px-2.5 py-1 rounded text-xs font-mono tracking-tight text-zinc-300">Endangered</span>
+                        </div>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                            A traditional long-pod pole sitaw cultivar passed down organically through generations. Exceptional heat-tolerance during dry season cycles.
+                        </p>
+                    </div>
+                    <div class="p-6 bg-zinc-900/50 border-t border-zinc-700/40 flex justify-between items-center">
+                        <span class="text-xs text-zinc-500 font-medium">Origin: Sierra Bullones, Bohol</span>
+                        <button class="text-xs font-bold uppercase tracking-wider text-white hover:text-riceGold transition-all flex items-center gap-1">
+                            Request Seeds <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION / REGISTRATION -->
+    <section id="join" class="py-20 max-w-4xl mx-auto px-4">
+        <div class="bg-white rounded-3xl p-8 sm:p-12 shadow-xl border border-zinc-100 relative overflow-hidden">
+            <div class="absolute top-0 right-0 p-8 text-7xl text-zinc-100 font-serif font-black select-none pointer-events-none">BHSN</div>
+            
+            <div class="relative">
+                <span class="text-xs uppercase font-bold tracking-widest text-warmClay block mb-2">Join the Network</span>
+                <h2 class="font-serif text-3xl font-bold text-earthGreen mb-4">Become a Registered Seed Keeper</h2>
+                <p class="text-zinc-600 text-sm leading-relaxed mb-8 max-w-xl">
+                    Whether you are an organic farmer with generations of backyard seed varieties or a home gardener wanting to multiply endangered local flora, we welcome your hands. Join our community exchange system.
+                </p>
+
+                <!-- Simple Contact/Signup Form -->
+                <form class="space-y-4" onsubmit="event.preventDefault(); alert('Salamat! We will connect with you soon.');">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs uppercase tracking-wider text-zinc-500 font-semibold mb-2">Your Name</label>
+                            <input type="text" required class="w-full bg-paleSand border border-zinc-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-earthGreen" placeholder="Juan Dela Cruz">
+                        </div>
+                        <div>
+                            <label class="block text-xs uppercase tracking-wider text-zinc-500 font-semibold mb-2">Email Address</label>
+                            <input type="email" required class="w-full bg-paleSand border border-zinc-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-earthGreen" placeholder="juan@example.com">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-zinc-500 font-semibold mb-2">Are you a Farmer, Home Gardener, or Supporter?</label>
+                        <select class="w-full bg-paleSand border border-zinc-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-earthGreen">
+                            <option>Home Gardener / Hobbyist</option>
+                            <option>Commercial / Smallholder Farmer</option>
+                            <option>Academic Researcher / Supporter</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-zinc-500 font-semibold mb-2">Message or Seed Strains You Guard</label>
+                        <textarea rows="3" class="w-full bg-paleSand border border-zinc-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-earthGreen" placeholder="Tell us about the varieties you are growing or looking to save..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-earthGreen hover:bg-zinc-800 text-white font-semibold py-4 rounded-xl tracking-wide transition-all shadow-md mt-2">
+                        Submit Application & Join Network
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-earthGreen text-zinc-400 text-xs py-12 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-6">
+            <div class="text-center sm:text-left">
+                <p class="font-serif text-white font-bold text-sm">Bohol Heirloom Seed Network</p>
+                <p class="mt-1">Dedicated to ethical crop stewardship & regional food autonomy.</p>
+            </div>
+            <div class="flex gap-6 text-zinc-300">
+                <a href="#" class="hover:text-riceGold"><i class="fa-brands fa-facebook text-lg"></i></a>
+                <a href="#" class="hover:text-riceGold"><i class="fa-brands fa-instagram text-lg"></i></a>
+                <a href="#" class="hover:text-riceGold"><i class="fa-regular fa-envelope text-lg"></i></a>
+            </div>
+            <p>&copy; 2026 Bohol Heirloom Seed Network. All rights reserved.</p>
+        </div>
     </footer>
 
 </body>
