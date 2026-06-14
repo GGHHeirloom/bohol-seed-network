@@ -3,20 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bohol Philippines Heirloom Seed Network (BHSN)</title>
+    <title>BOHOL Philippines HEIRLOOM SEED NETWORK | Seed Sovereignty & Agricultural Innovation</title>
     <style>
-        /* Modern Organic Theme Variables */
         :root {
-            --forest-dark: #1b4332;
-            --forest-leaf: #2d6a4f;
-            --earth-warm: #fdfaf6;
-            --terracotta: #d94e34;
-            --amber-glow: #f5a623;
-            --text-main: #2d3748;
-            --text-muted: #5a6578;
-            --bg-stone: #f4ede4;
+            --primary: #2e7d32;
+            --primary-light: #e8f5e9;
+            --secondary: #8d6e63;
+            --dark: #263238;
+            --light: #f8f9fa;
         }
-
+        
         * {
             box-sizing: border-box;
             margin: 0;
@@ -25,381 +21,237 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.7;
-            color: var(--text-main);
-            background-color: var(--bg-stone);
-            padding: 0;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+            scroll-behavior: smooth;
         }
 
-        /* Banner Header Configuration */
         header {
-            background: linear-gradient(135deg, var(--forest-dark) 0%, #081c15 100%);
+            background-color: var(--primary);
             color: white;
-            padding: 60px 20px;
+            padding: 2.5rem 1rem;
             text-align: center;
-            border-bottom: 5px solid var(--amber-glow);
         }
 
         header h1 {
-            font-size: 2.6rem;
-            font-weight: 800;
-            margin-bottom: 20px;
-            letter-spacing: -0.5px;
-            color: #f4f9f4;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
         }
 
-        /* Shield & Badge Custom CSS Reproductions */
-        .shield-row {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin-top: 15px;
-        }
-
-        .shield-badge {
-            display: inline-flex;
-            align-items: center;
-            color: white;
-            font-family: Arial, sans-serif;
-            font-size: 11px;
-            font-weight: bold;
-            text-transform: uppercase;
-            border-radius: 4px;
-            overflow: hidden;
-            height: 28px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        .shield-left {
-            background-color: #555555;
-            padding: 0 10px;
-            display: flex;
-            align-items: center;
-            height: 100%;
-        }
-
-        .shield-right {
-            padding: 0 10px;
-            display: flex;
-            align-items: center;
-            height: 100%;
-        }
-
-        .bg-emerald { background-color: #00b4d8; background: #2d6a4f; }
-        .bg-blue { background-color: #0077b6; }
-        .bg-amber { background-color: #e65100; background: var(--terracotta); }
-
-        /* Structural Container System */
-        main {
-            max-width: 1100px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-
-        section {
-            background: var(--earth-warm);
-            padding: 45px 40px;
-            border-radius: 14px;
-            box-shadow: 0 10px 25px -5px rgba(45, 55, 72, 0.06);
-            border: 1px solid #ebdcc9;
-            margin-bottom: 35px;
-        }
-
-        /* Typography Formatting rules */
-        h2 {
-            font-size: 1.8rem;
-            color: var(--forest-dark);
-            margin-bottom: 20px;
-            padding-bottom: 8px;
-            border-bottom: 2px solid #ebdcc9;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        h3 {
-            font-size: 1.3rem;
-            color: var(--forest-leaf);
-            margin-top: 25px;
-            margin-bottom: 12px;
-        }
-
-        p {
-            margin-bottom: 20px;
-            font-size: 1.05rem;
-            color: var(--text-main);
-        }
-
-        blockquote {
-            background-color: #e9f5ed;
-            border-left: 5px solid var(--forest-leaf);
-            padding: 20px;
-            border-radius: 0 8px 8px 0;
-            margin: 25px 0;
+        header p {
+            font-size: 1.1rem;
             font-style: italic;
+            opacity: 0.9;
         }
 
-        /* Core Pillars List Framework */
-        ul {
-            list-style-type: none;
-            margin-bottom: 25px;
+        nav {
+            background-color: #1b5e20;
+            padding: 0.5rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
-        ul li {
-            margin-bottom: 18px;
-            padding-left: 25px;
-            position: relative;
-            font-size: 1.02rem;
-        }
-
-        ul li::before {
-            content: "✨";
-            position: absolute;
-            left: 0;
-            top: 2px;
-            font-size: 0.95rem;
-        }
-
-        /* Vault Table Presentation Layer */
-        .table-responsive {
-            width: 100%;
-            overflow-x: auto;
-            margin: 25px 0;
-            border-radius: 8px;
-            border: 1px solid #ebdcc9;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            text-align: left;
-            background: #ffffff;
-            font-size: 0.98rem;
-        }
-
-        th {
-            background-color: var(--forest-dark);
+        nav a {
             color: white;
-            padding: 14px 16px;
-            font-weight: 600;
-            text-transform: uppercase;
-            font-size: 0.85rem;
-            letter-spacing: 0.5px;
-        }
-
-        td {
-            padding: 14px 16px;
-            border-bottom: 1px solid #e2e8f0;
-            color: var(--text-main);
-        }
-
-        tr:nth-child(even) td {
-            background-color: #fcfaf7;
-        }
-
-        /* Vault Rare / Endangered Status Indicators */
-        .status-pill {
-            display: inline-block;
-            padding: 3px 10px;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
-        .status-rare { background-color: #ffebe7; color: #c53030; }
-        .status-stable { background-color: #e6fffa; color: #234e52; }
-        .status-endangered { background-color: #fffaf0; color: #dd6b20; }
-        .status-climatized { background-color: #ebf8ff; color: #2b6cb0; }
-
-        /* Ordered Instructions Blocks */
-        ol {
-            margin-left: 20px;
-            margin-bottom: 25px;
-        }
-
-        ol li {
-            margin-bottom: 12px;
-            font-size: 1.02rem;
-            padding-left: 5px;
-        }
-
-        a {
-            color: var(--terracotta);
             text-decoration: none;
-            font-weight: 600;
+            padding: 0.5rem 1rem;
+            margin: 0 0.25rem;
+            font-weight: bold;
+            display: inline-block;
         }
 
-        a:hover {
-            text-decoration: underline;
+        nav a:hover {
+            background-color: var(--primary);
+            border-radius: 4px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .hero {
+            background-color: var(--primary-light);
+            border-left: 5px solid var(--primary);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2.5rem;
+        }
+
+        .hero h2 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--primary);
+        }
+
+        .card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .img-placeholder {
+            background-color: #ddd;
+            width: 100%;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            color: #666;
+            font-size: 0.9rem;
+            overflow: hidden;
+        }
+
+        .img-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .badge {
+            background-color: var(--secondary);
+            color: white;
+            padding: 0.2rem 0.6rem;
+            font-size: 0.8rem;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 0.5rem;
         }
 
         footer {
+            background-color: var(--dark);
+            color: white;
             text-align: center;
-            padding: 50px 20px;
-            background-color: var(--forest-dark);
-            color: #b7e4c7;
-            font-size: 1rem;
-            margin-top: 60px;
-            border-top: 4px solid var(--amber-glow);
+            padding: 2rem 1rem;
+            margin-top: 4rem;
         }
 
-        footer i {
-            display: block;
-            margin-top: 10px;
-            opacity: 0.8;
+        footer p {
+            margin-bottom: 0.5rem;
             font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.8rem; }
+            .grid { grid-template-columns: 1fr; }
+            nav a { padding: 0.4rem 0.5rem; font-size: 0.9rem; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header Frame Reproducing Readme Badges -->
     <header>
-        <h1>🌾 Bohol Philippines Heirloom Seed Network (BHSN)</h1>
-        <div class="shield-row">
-            <div class="shield-badge">
-                <div class="shield-left">Status</div>
-                <div class="shield-right bg-emerald">Active</div>
-            </div>
-            <div class="shield-badge">
-                <div class="shield-left">Region</div>
-                <div class="shield-right bg-blue">Visayas, PH</div>
-            </div>
-            <div class="shield-badge">
-                <div class="shield-left">Focus</div>
-                <div class="shield-right bg-amber">Food Sovereignty</div>
-            </div>
-        </div>
+        <h1>BOHOL Philippines HEIRLOOM SEED NETWORK</h1>
+        <p>Empowering Farmers through Seed Sovereignty & Agro-Ecological Innovations</p>
     </header>
 
-    <main>
+    <nav>
+        <a href="#about">Our Mission</a>
+        <a href="#heirloom">Heirloom Seeds</a>
+        <a href="#sovereignty">Seed Sovereignty</a>
+        <a href="#bioponics">Bioponics</a>
+        <a href="#soil">Soil Amendments</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
         
-        <!-- ================= OVERVIEW SECTION ================= -->
-        <section id="overview">
-            <h2>🗺️ Overview</h2>
-            <p>The Bohol Heirloom Seed Network (BHSN) is a grassroots, community-led initiative dedicated to the systematic identification, preservation, genetic stabilization, and ethical distribution of native, open-pollinated heirloom seeds across the province of Bohol.</p>
-            <p>By countering industrial monoculture and protecting ancestral landraces, we actively secure agricultural biodiversity, foster robust climate resilience within regional soil ecosystems, and honor traditional Boholano farming heritage.</p>
+        <section id="about" class="hero">
+            <h2>Advancing Sustainable Agriculture in Bohol</h2>
+            <p>The Bohol Seed Network is a community-driven initiative focused on developing resilient agricultural systems. Through strategic upcycling, localized seed libraries, and circular economy practices, we provide practical, tech-voc aligned training to ensure long-term food security and climate resilience for local farming communities.</p>
+        </section>
+
+        <section class="grid">
             
-            <blockquote>
-                🧬 <strong>Our Philosophy:</strong> True conservation is active. We don’t just store seeds in a vault; we grow, adapt, and evolve them in the field to secure true localized food sovereignty and community autonomy.
-            </blockquote>
-        </section>
-
-        <!-- ================= ABOUT US SECTION ================= -->
-        <section id="about-us">
-            <h2>🗺️ About Us</h2>
-            <p>The Bohol Heirloom Seed Network (BHSN) is a flagship initiative of Green Gardens of Hope (GGH) Agriventures. We exist to reclaim, multiply, and protect the God-given gift of pure, unaltered seeds. Passed down from generation to generation, these heirloom varieties are living legacies. Our mission is to safeguard these genetics to restore natural abundance, defend farmer autonomy, and ensure our food remains true to how it was created.</p>
-        </section>
-
-        <!-- ================= OUR HISTORY SECTION ================= -->
-        <section id="history">
-            <h2>🗺️ Our History: The GGH Journey</h2>
-            <p>Founded in 2019, Green Gardens of Hope (GGH) began with a clear mission: to heal the soil, empower farmers, and bring agricultural hope to Bohol.</p>
-            <p>We started in circular economy waste-management, converting organic bio-waste into rich soil amendments. However, we quickly realized that living soil requires pure genetics. Recognizing that industrial hybrids left farmers dependent on chemical inputs, GGH pivoted to secure seed sovereignty.</p>
-            <p>Our deep field expertise led GGH to become the first institution to offer the official Vegetable Seed Production program under TESDA, serving as a vital industry expert contributor in shaping the national Competency Standards (CS).</p>
-            <p>True seed sovereignty belongs to everyone. To build a decentralized movement, we extended our specialized Seed Keeper System beyond traditional farms—embedding living seed banks into local schools, rural communities, and even prison rehabilitation programs. By pairing ancient heirloom conservation with modern innovations like heat-tolerant hybridization and non-electric bioponics, GGH continues to pioneer a climate-resilient, self-reliant future.</p>
-        </section>
-
-        <!-- ================= CORE PILLARS SECTION ================= -->
-        <section id="pillars">
-            <h2>✨ Core Pillars & Focus Areas</h2>
-            <ul>
-                <li><strong>100% Native & Adaptive Selection:</strong> Cultivating strains meticulously acclimated over generations to Bohol’s unique limestone soils and monsoonal weather patterns.</li>
-                <li><strong>Genetic Purity Protection:</strong> Strictly safeguarding open-pollinated, non-hybridized, and completely GMO-free crops.</li>
-                <li><strong>Community Custodianship:</strong> Operating a decentralized, shared seed-saving bank where local smallholders, agrarian innovators, and home gardeners grow, multiply, swap, and return pure seed stocks back to the collective network.</li>
-                <li><strong>Germplasm Collection & Exploration:</strong> Proactively scouting and mapping endangered regional varieties across Bohol's diverse microclimates to build a robust, living genetic library of ancestral food crops.</li>
-                <li><strong>Adaptive Hybridization:</strong> Engaging in controlled, strategic cross-breeding of traditional variants to build elite, multi-strain resilience—selections specifically engineered for high heat tolerance, natural pest barriers, and non-electric, stagnant bioponic systems.</li>
-            </ul>
-        </section>
-
-        <!-- ================= VAULT VARIETIES SECTION ================= -->
-        <section id="vault">
-            <h2>🗃️ Featured Heirloom Strains (The Vault)</h2>
-            <p>Our network tracks, catalogs, and multiplies traditional cultivars. Below are our high-priority preservation strains:</p>
+            <!-- Section 1: Heirloom Seeds Collection -->
+            <div id="heirloom" class="card" style="border-top-color: var(--secondary);">
+                <div class="img-placeholder">
+                    <!-- Replace 'heirloom.jpg' with your uploaded image filename -->
+                    <img src="heirloom.jpg" alt="Traditional and heritage open-pollinated vegetable seeds">
+                </div>
+                <span class="badge" style="background-color: var(--primary);">Genetic Heritage</span>
+                <h3>Heirloom Seeds</h3>
+                <p>We actively scout, catalogue, and propagate native, open-pollinated vegetable varieties unique to our region. These heritage seeds carry natural generational resilience against local pests and climate fluctuations, serving as a biological foundation for regional nutrition.</p>
+                <br>
+                <p><strong>Focus Area:</strong> Native crop classification, multiplication, and community seed distribution maps.</p>
+            </div>
             
-            <div class="table-responsive">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Category</th>
-                            <th>Cultivar Name</th>
-                            <th>Status</th>
-                            <th>Traditional Origin</th>
-                            <th>Key Traits</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Tubers & Roots</strong></td>
-                            <td><strong>Ubi Kinampay</strong></td>
-                            <td><span class="status-pill status-rare">🚨 Extremely Rare</span></td>
-                            <td>Jagna / Mabini</td>
-                            <td>Deep violet flesh, highly aromatic, sacred cultural value.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Grains & Maize</strong></td>
-                            <td><strong>Calape White Flint</strong></td>
-                            <td><span class="status-pill status-stable">🟢 Stable Supply</span></td>
-                            <td>Calape</td>
-                            <td>Rugged, pest-resistant corn traditionally milled into grits.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Vegetables</strong></td>
-                            <td><strong>Boholano String Bean</strong></td>
-                            <td><span class="status-pill status-endangered">⚠️ Endangered</span></td>
-                            <td>Sierra Bullones</td>
-                            <td>Exceptional heat-tolerance during severe dry seasons.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Vegetables</strong></td>
-                            <td><strong>Orange Okra</strong></td>
-                            <td><span class="status-pill status-climatized">climatized from Europe</span></td>
-                            <td>Green Gardens of Hope GGH</td>
-                            <td>Exceptional heat-tolerance during severe dry seasons.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Vegetables</strong></td>
-                            <td><strong>Black beauty eggplant</strong></td>
-                            <td><span class="status-pill status-climatized">Climatized from Europe</span></td>
-                            <td>GGH</td>
-                            <td>Exceptional heat-tolerance during severe dry seasons.</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <!-- Section 2: Seed Sovereignty -->
+            <div id="sovereignty" class="card">
+                <div class="img-placeholder">
+                    <!-- Replace 'seeds.jpg' with your uploaded image filename -->
+                    <img src="seeds.jpg" alt="Heirloom vegetable seeds saved in jars">
+                </div>
+                <span class="badge">Community-Led</span>
+                <h3>Seed Sovereignty</h3>
+                <p>We are dedicated to safeguarding genetic diversity by establishing municipal seed libraries. By preserving heirloom and open-pollinated vegetable varieties, we protect local farmers from seed dependency and reinforce regional agricultural resilience.</p>
+                <br>
+                <p><strong>Focus Area:</strong> Vegetable Seed Production NC III standards and regional adaptation.</p>
+            </div>
+
+            <!-- Section 3: Bioponics -->
+            <div id="bioponics" class="card">
+                <div class="img-placeholder">
+                    <!-- Replace 'bioponics.jpg' with your uploaded image filename -->
+                    <img src="bioponics.jpg" alt="Bioponic growing system using upcycled vessels">
+                </div>
+                <span class="badge">Strategic Upcycling</span>
+                <h3>Bioponic Succession Systems</h3>
+                <p>Our low-cost, stagnant bioponic models are designed specifically for non-electric, rural, and resource-limited spaces. We creatively upcycle post-consumer plastics into high-performance cultivation vessels that utilize organic, biologically active nutrient mixtures.</p>
+                <br>
+                <p><strong>Focus Area:</strong> Affordable, zero-electricity hydroponics using organic-based inputs.</p>
+            </div>
+
+            <!-- Section 4: Organic Soil Amendments -->
+            <div id="soil" class="card">
+                <div class="img-placeholder">
+                    <!-- Replace 'biochar.jpg' with your uploaded image filename -->
+                    <img src="biochar.jpg" alt="Dark organic compost and biochar substrate">
+                </div>
+                <span class="badge">Circular Economy</span>
+                <h3>Biochar & Soil Amendments</h3>
+                <p>We actively combat agricultural waste by processing municipal and farm bio-waste into rich, biochar-enriched organic soil amendments. This system builds long-term soil microbiology, increases soil water retention, and locks carbon into the earth.</p>
+                <br>
+                <p><strong>Focus Area:</strong> Repurposing bio-waste substrates for sustainable crop production.</p>
+            </div>
+
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="card" style="border-top-color: var(--secondary); max-width: 600px; margin: 0 auto;">
+            <h3 style="color: var(--secondary); text-align: center;">Collaborate With Us</h3>
+            <p style="text-align: center; margin-bottom: 1.5rem;">Are you an agricultural innovator, local government unit, or smallholder farmer looking to build sustainable community models? Let's connect.</p>
+            <div style="text-align: center; line-height: 1.8;">
+                <p><strong>Location:</strong> Bohol, Philippines</p>
+                <p><strong>Partnerships:</strong> In coordination with local extension frameworks and organic standards.</p>
             </div>
         </section>
 
-        <!-- ================= INVOLVEMENT SECTION ================= -->
-        <section id="get-involved">
-            <h2>🚀 Getting Involved</h2>
-            <p>Whether you are an organic farmer carrying a legacy backyard variety, an agricultural researcher, or a home gardener passionate about native ecology, your hands are welcome.</p>
-            
-            <h3>How to Contribute:</h3>
-            <ol>
-                <li><strong>Register a Strain:</strong> If you possess a generational family seed strain from Bohol, let us help document and back up its genetic lineage.</li>
-                <li><strong>Become a Multiplier:</strong> Receive rare seeds from the vault, grow them cleanly, and return a portion of the fresh harvest to help scale the library.</li>
-                <li><strong>Digital Support:</strong> Help us map local seed libraries, build community registries, and clean open agricultural data.</li>
-            </ol>
-        </section>
+    </div>
 
-        <!-- ================= CONTACT SECTION ================= -->
-        <section id="contact">
-            <h2>📬 Contact & Connect</h2>
-            <ul>
-                <li><strong>Coordinator Email:</strong> <a href="mailto:greengardensofhope@gmail.com">greengardensofhope@gmail.com</a></li>
-                <li><strong>Community Base:</strong> Central Visayas, Philippines</li>
-                <li><strong>Social Registry:</strong> Stay updated via our local community bulletin boards and farming loops.</li>
-            </ul>
-        </section>
-
-    </main>
-
-    <!-- Footer System Frame -->
     <footer>
-        <p>&copy; 2026 Bohol Seed Network & Green Gardens of Hope.</p>
-        <i>Guarding the Sacred Ancestral Seeds of Bohol for Future Generations. 🇵🇭</i>
+        <p>&copy; 2026 Bohol Seed Network & Green Gardens of Hope Agriventures. All Rights Reserved.</p>
+        <p>Built for community-based agricultural sustainability.</p>
     </footer>
 
 </body>
