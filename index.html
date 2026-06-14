@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bohol Seed Network | Heirloom Conservation</title>
+    <title>Bohol Philippines Heirloom Seed Network (BHSN)</title>
     <style>
-        /* Modern Reset and Root Accent Variables */
+        /* Modern Organic Theme Variables */
         :root {
             --forest-dark: #1b4332;
             --forest-leaf: #2d6a4f;
@@ -14,6 +14,7 @@
             --amber-glow: #f5a623;
             --text-main: #2d3748;
             --text-muted: #5a6578;
+            --bg-stone: #f4ede4;
         }
 
         * {
@@ -24,331 +25,381 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
+            line-height: 1.7;
             color: var(--text-main);
-            background-color: #f4ede4; /* Rich, organic stone background tint */
+            background-color: var(--bg-stone);
             padding: 0;
         }
 
-        /* Hero Header with Vibrant Earth Accents */
+        /* Banner Header Configuration */
         header {
             background: linear-gradient(135deg, var(--forest-dark) 0%, #081c15 100%);
             color: white;
             padding: 60px 20px;
             text-align: center;
             border-bottom: 5px solid var(--amber-glow);
-            position: relative;
         }
 
         header h1 {
-            font-size: 2.8rem;
+            font-size: 2.6rem;
             font-weight: 800;
-            margin-bottom: 12px;
+            margin-bottom: 20px;
             letter-spacing: -0.5px;
             color: #f4f9f4;
             text-shadow: 0 2px 4px rgba(0,0,0,0.2);
         }
 
-        header p {
-            font-size: 1.2rem;
-            color: #b7e4c7;
-            max-width: 700px;
-            margin: 0 auto;
-            font-weight: 400;
+        /* Shield & Badge Custom CSS Reproductions */
+        .shield-row {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 15px;
         }
 
-        /* Layout Framework */
+        .shield-badge {
+            display: inline-flex;
+            align-items: center;
+            color: white;
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 4px;
+            overflow: hidden;
+            height: 28px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .shield-left {
+            background-color: #555555;
+            padding: 0 10px;
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+
+        .shield-right {
+            padding: 0 10px;
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+
+        .bg-emerald { background-color: #00b4d8; background: #2d6a4f; }
+        .bg-blue { background-color: #0077b6; }
+        .bg-amber { background-color: #e65100; background: var(--terracotta); }
+
+        /* Structural Container System */
         main {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 40px auto;
             padding: 0 20px;
         }
 
         section {
             background: var(--earth-warm);
-            padding: 50px 40px;
-            border-radius: 16px;
-            box-shadow: 0 10px 25px -5px rgba(45, 55, 72, 0.08);
+            padding: 45px 40px;
+            border-radius: 14px;
+            box-shadow: 0 10px 25px -5px rgba(45, 55, 72, 0.06);
             border: 1px solid #ebdcc9;
-            margin-bottom: 40px;
+            margin-bottom: 35px;
         }
 
-        /* Section Framing Title Components */
-        .section-title-container {
-            text-align: center;
-            margin-bottom: 45px;
-        }
-
-        .section-title-container h2 {
-            font-size: 2.2rem;
+        /* Typography Formatting rules */
+        h2 {
+            font-size: 1.8rem;
             color: var(--forest-dark);
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #ebdcc9;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
-        .section-title-container p {
-            color: var(--terracotta);
-            font-size: 1.1rem;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-            margin-top: 4px;
+        h3 {
+            font-size: 1.3rem;
+            color: var(--forest-leaf);
+            margin-top: 25px;
+            margin-bottom: 12px;
         }
 
-        .line-divider {
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(90deg, var(--terracotta), var(--amber-glow));
-            margin: 15px auto 0 auto;
-            border-radius: 4px;
+        p {
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+            color: var(--text-main);
         }
 
-        /* Registry Catalog Header Callout Banner */
-        .catalog-header {
+        blockquote {
             background-color: #e9f5ed;
             border-left: 5px solid var(--forest-leaf);
-            padding: 24px;
-            border-radius: 0 12px 12px 0;
-            margin-bottom: 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 25px 0;
+            font-style: italic;
         }
 
-        .catalog-header p {
-            font-size: 1.05rem;
-            color: var(--forest-dark);
-            max-width: 850px;
-            font-weight: 500;
+        /* Core Pillars List Framework */
+        ul {
+            list-style-type: none;
+            margin-bottom: 25px;
         }
 
-        .download-btn {
-            display: inline-flex;
-            align-items: center;
-            background-color: var(--terracotta);
-            color: white;
-            padding: 14px 28px;
+        ul li {
+            margin-bottom: 18px;
+            padding-left: 25px;
+            position: relative;
+            font-size: 1.02rem;
+        }
+
+        ul li::before {
+            content: "✨";
+            position: absolute;
+            left: 0;
+            top: 2px;
+            font-size: 0.95rem;
+        }
+
+        /* Vault Table Presentation Layer */
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+            margin: 25px 0;
             border-radius: 8px;
-            text-decoration: none;
-            font-weight: 700;
+            border: 1px solid #ebdcc9;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            background: #ffffff;
+            font-size: 0.98rem;
+        }
+
+        th {
+            background-color: var(--forest-dark);
+            color: white;
+            padding: 14px 16px;
+            font-weight: 600;
             text-transform: uppercase;
             font-size: 0.85rem;
             letter-spacing: 0.5px;
-            box-shadow: 0 4px 12px rgba(217, 78, 52, 0.3);
-            transition: all 0.2s ease-in-out;
         }
 
-        .download-btn:hover {
-            background-color: #be3921;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(217, 78, 52, 0.4);
+        td {
+            padding: 14px 16px;
+            border-bottom: 1px solid #e2e8f0;
+            color: var(--text-main);
         }
 
-        /* AUTO-FITTING ELEGANT RESPONSIVE CARD GRID */
-        .strains-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 35px;
+        tr:nth-child(even) td {
+            background-color: #fcfaf7;
         }
 
-        /* Premium Strain Cards UI Setup */
-        .strain-card {
-            background-color: #ffffff;
-            border: 1px solid #ebdcc9;
-            border-radius: 12px;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
-            transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.3s ease;
-        }
-
-        .strain-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 20px 30px -10px rgba(27, 67, 50, 0.15);
-            border-color: #d1bfa7;
-        }
-
-        /* Image Display Frame */
-        .strain-card .image-wrapper {
-            position: relative;
-            width: 100%;
-            height: 250px;
-            overflow: hidden;
-            background-color: #ebdcc9;
-        }
-
-        .strain-card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            transition: transform 0.5s ease;
-        }
-
-        .strain-card:hover img {
-            transform: scale(1.04);
-        }
-
-        /* Dynamic Category & Tech Badges layout */
-        .card-content {
-            padding: 28px;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-        }
-
-        .badge-row {
-            display: flex;
-            gap: 8px;
-            margin-bottom: 16px;
-            flex-wrap: wrap;
-        }
-
-        .category-tag {
-            font-size: 0.7rem;
+        /* Vault Rare / Endangered Status Indicators */
+        .status-pill {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.75rem;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 0.8px;
-            padding: 4px 10px;
-            border-radius: 4px;
+        }
+        .status-rare { background-color: #ffebe7; color: #c53030; }
+        .status-stable { background-color: #e6fffa; color: #234e52; }
+        .status-endangered { background-color: #fffaf0; color: #dd6b20; }
+        .status-climatized { background-color: #ebf8ff; color: #2b6cb0; }
+
+        /* Ordered Instructions Blocks */
+        ol {
+            margin-left: 20px;
+            margin-bottom: 25px;
         }
 
-        /* Color profiles specific to individual strain contexts */
-        .solanaceae-tag { background-color: #ffebe7; color: var(--terracotta); }
-        .leguminosae-tag { background-color: #e8f5e9; color: var(--forest-leaf); }
-        .cucurbitaceae-tag { background-color: #fff8e1; color: #b7791f; }
-
-        .tech-badge {
-            background-color: #edf2f7;
-            color: var(--text-muted);
-            font-size: 0.68rem;
-            font-weight: 600;
-            padding: 4px 8px;
-            border-radius: 4px;
-        }
-
-        .strain-card h3 {
-            font-size: 1.4rem;
-            color: var(--forest-dark);
+        ol li {
             margin-bottom: 12px;
-            font-weight: 700;
+            font-size: 1.02rem;
+            padding-left: 5px;
         }
 
-        .strain-card p {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            line-height: 1.65;
+        a {
+            color: var(--terracotta);
+            text-decoration: none;
+            font-weight: 600;
         }
 
-        /* Footer Frame */
+        a:hover {
+            text-decoration: underline;
+        }
+
         footer {
             text-align: center;
             padding: 50px 20px;
             background-color: var(--forest-dark);
             color: #b7e4c7;
-            font-size: 0.95rem;
-            margin-top: 80px;
+            font-size: 1rem;
+            margin-top: 60px;
             border-top: 4px solid var(--amber-glow);
         }
 
-        footer p {
-            opacity: 0.85;
-        }
-
-        /* Mobile Adaptive Tweak Padding Rules */
-        @media (max-width: 768px) {
-            header { padding: 40px 16px; }
-            header h1 { font-size: 2rem; }
-            section { padding: 30px 20px; }
-            .catalog-header { text-align: center; justify-content: center; border-radius: 12px; }
-            .download-btn { width: 100%; justify-content: center; }
+        footer i {
+            display: block;
+            margin-top: 10px;
+            opacity: 0.8;
+            font-size: 0.9rem;
         }
     </style>
 </head>
 <body>
 
+    <!-- Header Frame Reproducing Readme Badges -->
     <header>
-        <h1>Bohol Seed Network</h1>
-        <p>Securing Regional Food Sovereignty Through Community-Led Preservation of Native & Heirloom Varieties</p>
+        <h1>🌾 Bohol Philippines Heirloom Seed Network (BHSN)</h1>
+        <div class="shield-row">
+            <div class="shield-badge">
+                <div class="shield-left">Status</div>
+                <div class="shield-right bg-emerald">Active</div>
+            </div>
+            <div class="shield-badge">
+                <div class="shield-left">Region</div>
+                <div class="shield-right bg-blue">Visayas, PH</div>
+            </div>
+            <div class="shield-badge">
+                <div class="shield-left">Focus</div>
+                <div class="shield-right bg-amber">Food Sovereignty</div>
+            </div>
+        </div>
     </header>
 
     <main>
-        <!-- ================= HEIRLOOM SEED SECTION ================= -->
-        <section id="heirloom">
-            <div>
-                <div class="section-title-container">
-                    <h2>Preserved Strains</h2>
-                    <p>Heirloom Vegetable Collections</p>
-                    <div class="line-divider"></div>
-                </div>
-                
-                <div class="catalog-header">
-                    <p>Our active genetic production safeguards pure, open-pollinated regional strains curated for maximum resilience in non-electric setups and changing environments without agro-chemical inputs.</p>
-                    <a href="catalogs/seed-catalog.pdf" target="_blank" class="download-btn">
-                        <span>Download Full Registry</span>
-                    </a>
-                </div>
+        
+        <!-- ================= OVERVIEW SECTION ================= -->
+        <section id="overview">
+            <h2>🗺️ Overview</h2>
+            <p>The Bohol Heirloom Seed Network (BHSN) is a grassroots, community-led initiative dedicated to the systematic identification, preservation, genetic stabilization, and ethical distribution of native, open-pollinated heirloom seeds across the province of Bohol.</p>
+            <p>By countering industrial monoculture and protecting ancestral landraces, we actively secure agricultural biodiversity, foster robust climate resilience within regional soil ecosystems, and honor traditional Boholano farming heritage.</p>
+            
+            <blockquote>
+                🧬 <strong>Our Philosophy:</strong> True conservation is active. We don’t just store seeds in a vault; we grow, adapt, and evolve them in the field to secure true localized food sovereignty and community autonomy.
+            </blockquote>
+        </section>
 
-                <div class="strains-grid">
-                    
-                    <!-- CARD 1: SOLANACEAE -->
-                    <div class="strain-card">
-                        <div class="image-wrapper">
-                            <img alt="Native Solanaceae Strain - Heat Armor Selection" src="images/solanaceae-strain.jpg">
-                        </div>
-                        <div class="card-content">
-                            <div class="badge-row">
-                                <span class="category-tag solanaceae-tag">Solanaceae Strain</span>
-                                <span class="tech-badge">OPV Seed</span>
-                                <span class="tech-badge">Heat-Hardy</span>
-                            </div>
-                            <h3>Native Varieties (Heat Armor)</h3>
-                            <p>Ultra-resilient nightshades selected for exceptional heat tolerance and natural pest barriers. Featuring robust stalk profiles and thickened cuticles, these native landrace peppers, eggplants, and tomatoes are bred to withstand extreme weather shocks while delivering heavy, high-flavor yields without intensive chemical inputs.</p>
-                        </div>
-                    </div>
-                    
-                    <!-- CARD 2: LEGUMINOSAE -->
-                    <div class="strain-card">
-                        <div class="image-wrapper">
-                            <img alt="Indigenous Leguminosae Strain - Root Nodule Nitrogen Selection" src="images/leguminosae-strain.jpg">
-                        </div>
-                        <div class="card-content">
-                            <div class="badge-row">
-                                <span class="category-tag leguminosae-tag">Leguminosae Strain</span>
-                                <span class="tech-badge">Bio-Fixing</span>
-                                <span class="tech-badge">Companion Crop</span>
-                            </div>
-                            <h3>Indigenous Legumes (Living Nitrogen)</h3>
-                            <p>High-vigor heirloom field beans and climbing varieties optimized for vertical polyculture. These indigenous legumes feature hyper-efficient root-nodule symbiosis, pulling atmospheric nitrogen down to naturally feed your soil while maximizing vertical space with aggressive vining habits and heavy, protein-rich yields.</p>
-                        </div>
-                    </div>
-                    
-                    <!-- CARD 3: CUCURBITACEAE -->
-                    <div class="strain-card">
-                        <div class="image-wrapper">
-                            <img alt="Traditional Cucurbitaceae Strain - Soil Blanket Canopy" src="images/cucurbitaceae-strain.jpg">
-                        </div>
-                        <div class="card-content">
-                            <div class="badge-row">
-                                <span class="category-tag cucurbitaceae-tag">Cucurbitaceae Strain</span>
-                                <span class="tech-badge">Living Mulch</span>
-                                <span class="tech-badge">Drought-Resistent</span>
-                            </div>
-                            <h3>Traditional Cucurbits (Living Mulch)</h3>
-                            <p>Traditional, deep-rooted squashes and melons engineered for total ground-cover dominance. Their massive fan leaves form a living canopy that traps soil moisture and suppresses weeds, while extensive taproot networks lock in drought-hardy vigor and concentrate rich, ancient flavor profiles into every fruit.</p>
-                        </div>
-                    </div>
+        <!-- ================= ABOUT US SECTION ================= -->
+        <section id="about-us">
+            <h2>🗺️ About Us</h2>
+            <p>The Bohol Heirloom Seed Network (BHSN) is a flagship initiative of Green Gardens of Hope (GGH) Agriventures. We exist to reclaim, multiply, and protect the God-given gift of pure, unaltered seeds. Passed down from generation to generation, these heirloom varieties are living legacies. Our mission is to safeguard these genetics to restore natural abundance, defend farmer autonomy, and ensure our food remains true to how it was created.</p>
+        </section>
 
-                </div>
+        <!-- ================= OUR HISTORY SECTION ================= -->
+        <section id="history">
+            <h2>🗺️ Our History: The GGH Journey</h2>
+            <p>Founded in 2019, Green Gardens of Hope (GGH) began with a clear mission: to heal the soil, empower farmers, and bring agricultural hope to Bohol.</p>
+            <p>We started in circular economy waste-management, converting organic bio-waste into rich soil amendments. However, we quickly realized that living soil requires pure genetics. Recognizing that industrial hybrids left farmers dependent on chemical inputs, GGH pivoted to secure seed sovereignty.</p>
+            <p>Our deep field expertise led GGH to become the first institution to offer the official Vegetable Seed Production program under TESDA, serving as a vital industry expert contributor in shaping the national Competency Standards (CS).</p>
+            <p>True seed sovereignty belongs to everyone. To build a decentralized movement, we extended our specialized Seed Keeper System beyond traditional farms—embedding living seed banks into local schools, rural communities, and even prison rehabilitation programs. By pairing ancient heirloom conservation with modern innovations like heat-tolerant hybridization and non-electric bioponics, GGH continues to pioneer a climate-resilient, self-reliant future.</p>
+        </section>
+
+        <!-- ================= CORE PILLARS SECTION ================= -->
+        <section id="pillars">
+            <h2>✨ Core Pillars & Focus Areas</h2>
+            <ul>
+                <li><strong>100% Native & Adaptive Selection:</strong> Cultivating strains meticulously acclimated over generations to Bohol’s unique limestone soils and monsoonal weather patterns.</li>
+                <li><strong>Genetic Purity Protection:</strong> Strictly safeguarding open-pollinated, non-hybridized, and completely GMO-free crops.</li>
+                <li><strong>Community Custodianship:</strong> Operating a decentralized, shared seed-saving bank where local smallholders, agrarian innovators, and home gardeners grow, multiply, swap, and return pure seed stocks back to the collective network.</li>
+                <li><strong>Germplasm Collection & Exploration:</strong> Proactively scouting and mapping endangered regional varieties across Bohol's diverse microclimates to build a robust, living genetic library of ancestral food crops.</li>
+                <li><strong>Adaptive Hybridization:</strong> Engaging in controlled, strategic cross-breeding of traditional variants to build elite, multi-strain resilience—selections specifically engineered for high heat tolerance, natural pest barriers, and non-electric, stagnant bioponic systems.</li>
+            </ul>
+        </section>
+
+        <!-- ================= VAULT VARIETIES SECTION ================= -->
+        <section id="vault">
+            <h2>🗃️ Featured Heirloom Strains (The Vault)</h2>
+            <p>Our network tracks, catalogs, and multiplies traditional cultivars. Below are our high-priority preservation strains:</p>
+            
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Cultivar Name</th>
+                            <th>Status</th>
+                            <th>Traditional Origin</th>
+                            <th>Key Traits</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Tubers & Roots</strong></td>
+                            <td><strong>Ubi Kinampay</strong></td>
+                            <td><span class="status-pill status-rare">🚨 Extremely Rare</span></td>
+                            <td>Jagna / Mabini</td>
+                            <td>Deep violet flesh, highly aromatic, sacred cultural value.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Grains & Maize</strong></td>
+                            <td><strong>Calape White Flint</strong></td>
+                            <td><span class="status-pill status-stable">🟢 Stable Supply</span></td>
+                            <td>Calape</td>
+                            <td>Rugged, pest-resistant corn traditionally milled into grits.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Vegetables</strong></td>
+                            <td><strong>Boholano String Bean</strong></td>
+                            <td><span class="status-pill status-endangered">⚠️ Endangered</span></td>
+                            <td>Sierra Bullones</td>
+                            <td>Exceptional heat-tolerance during severe dry seasons.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Vegetables</strong></td>
+                            <td><strong>Orange Okra</strong></td>
+                            <td><span class="status-pill status-climatized">climatized from Europe</span></td>
+                            <td>Green Gardens of Hope GGH</td>
+                            <td>Exceptional heat-tolerance during severe dry seasons.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Vegetables</strong></td>
+                            <td><strong>Black beauty eggplant</strong></td>
+                            <td><span class="status-pill status-climatized">Climatized from Europe</span></td>
+                            <td>GGH</td>
+                            <td>Exceptional heat-tolerance during severe dry seasons.</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
+
+        <!-- ================= INVOLVEMENT SECTION ================= -->
+        <section id="get-involved">
+            <h2>🚀 Getting Involved</h2>
+            <p>Whether you are an organic farmer carrying a legacy backyard variety, an agricultural researcher, or a home gardener passionate about native ecology, your hands are welcome.</p>
+            
+            <h3>How to Contribute:</h3>
+            <ol>
+                <li><strong>Register a Strain:</strong> If you possess a generational family seed strain from Bohol, let us help document and back up its genetic lineage.</li>
+                <li><strong>Become a Multiplier:</strong> Receive rare seeds from the vault, grow them cleanly, and return a portion of the fresh harvest to help scale the library.</li>
+                <li><strong>Digital Support:</strong> Help us map local seed libraries, build community registries, and clean open agricultural data.</li>
+            </ol>
+        </section>
+
+        <!-- ================= CONTACT SECTION ================= -->
+        <section id="contact">
+            <h2>📬 Contact & Connect</h2>
+            <ul>
+                <li><strong>Coordinator Email:</strong> <a href="mailto:greengardensofhope@gmail.com">greengardensofhope@gmail.com</a></li>
+                <li><strong>Community Base:</strong> Central Visayas, Philippines</li>
+                <li><strong>Social Registry:</strong> Stay updated via our local community bulletin boards and farming loops.</li>
+            </ul>
+        </section>
+
     </main>
 
+    <!-- Footer System Frame -->
     <footer>
-        <p>&copy; 2026 Bohol Seed Network & Green Gardens of Hope. Anchored in community seed sovereignty.</p>
+        <p>&copy; 2026 Bohol Seed Network & Green Gardens of Hope.</p>
+        <i>Guarding the Sacred Ancestral Seeds of Bohol for Future Generations. 🇵🇭</i>
     </footer>
 
 </body>
