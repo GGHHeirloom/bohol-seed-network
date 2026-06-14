@@ -1,348 +1,240 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BOHOL PHILIPPINES HEIRLOOM SEED NETWORK</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome for Professional Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        agriGreen: {
-                            DEFAULT: '#2c5e3b',
-                            dark: '#1b3b24',
-                            light: '#a3b899'
-                        },
-                        earth: '#8b5a2b'
-                    }
-                }
-            }
+    <title>Bohol Seed Network</title>
+    <style>
+        /* Basic modern reset and typography base to look beautiful immediately */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
-    </script>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #2d3748;
+            background-color: #f7fafc;
+            padding: 0;
+        }
+        header {
+            background-color: #1a5235;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        /* Main structural containers */
+        main {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            margin-bottom: 40px;
+        }
+        
+        /* Section typography headers */
+        .section-title-container {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .section-title-container h2 {
+            font-size: 2rem;
+            color: #1a5235;
+            margin-bottom: 8px;
+        }
+        .section-title-container p {
+            color: #718096;
+            font-size: 1.1rem;
+        }
+        .line-divider {
+            width: 60px;
+            height: 4px;
+            background-color: #81e6d9;
+            margin: 12px auto 0 auto;
+            border-radius: 2px;
+        }
+
+        /* Banner styling */
+        .catalog-header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 30px;
+        }
+        .catalog-header p {
+            font-size: 1.1rem;
+            color: #4a5568;
+            max-width: 800px;
+            margin-bottom: 20px;
+        }
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            background-color: #1a5235;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.2s ease;
+        }
+        .download-btn:hover {
+            background-color: #236c46;
+        }
+
+        /* RESPONSIVE GRID SYSTEM FOR THE CARDS */
+        .strains-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        /* Individual Card Layout */
+        .strain-card {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.02);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .strain-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.08);
+        }
+        
+        /* Image presentation parameters */
+        .strain-card img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            display: block;
+            background-color: #edf2f7; /* Soft background while images load */
+        }
+        
+        /* Inner text fields wrapper */
+        .card-content {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        .category-tag {
+            display: inline-block;
+            align-self: flex-start;
+            background-color: #e6fffa;
+            color: #008174;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 4px 10px;
+            border-radius: 4px;
+            margin-bottom: 12px;
+        }
+        .strain-card h3 {
+            font-size: 1.25rem;
+            color: #1a202c;
+            margin-bottom: 12px;
+        }
+        .strain-card p {
+            font-size: 0.95rem;
+            color: #4a5568;
+            line-height: 1.6;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #a0aec0;
+            font-size: 0.9rem;
+            border-top: 1px solid #e2e8f0;
+            margin-top: 60px;
+        }
+    </style>
 </head>
-<body class="bg-stone-50 text-stone-800 font-sans leading-normal tracking-normal">
+<body>
 
-    <!-- Top Navigation Bar -->
-    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur shadow-md border-b border-stone-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-20">
-                <div class="flex items-center space-x-3">
-                    <div class="bg-agriGreen text-white p-2.5 rounded-xl shadow-inner">
-                        <i class="fa-solid fa-seedling text-2xl"></i>
-                    </div>
-                    <div>
-                        <span class="text-xl font-black tracking-tight text-agriGreen-dark block">BOHOL PHILIPPINES</span>
-                        <span class="text-xs uppercase tracking-widest text-stone-500 font-bold block -mt-1">HEIRLOOM SEED NETWORK</span>
-                    </div>
-                </div>
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center space-x-8 font-medium">
-                    <a href="#mission" class="text-stone-600 hover:text-agriGreen transition">Our Mission</a>
-                    <a href="#heirloom" class="text-stone-600 hover:text-agriGreen transition">Heirloom Seeds</a>
-                    <a href="#bioponics" class="text-stone-600 hover:text-agriGreen transition">Bioponics</a>
-                    <a href="#soil" class="text-stone-600 hover:text-agriGreen transition">Soil Amendments</a>
-                    <a href="#projects" class="text-stone-600 hover:text-agriGreen transition">Projects</a>
-                    <a href="#newsletter" class="text-stone-600 hover:text-agriGreen transition">Publications</a>
-                    <a href="#contact" class="bg-agriGreen text-white px-5 py-2.5 rounded-lg hover:bg-agriGreen-dark transition shadow-sm">Contact Us</a>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero / Landing Section -->
-    <header class="relative bg-gradient-to-br from-agriGreen-dark to-emerald-900 text-white py-24 px-4 overflow-hidden">
-        <div class="absolute inset-0 opacity-20 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1592417817098-8f3d6eb19675?auto=format&fit=crop&q=80&w=1200');"></div>
-        <div class="relative max-w-5xl mx-auto text-center space-y-6">
-            <span class="bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase">Preserving Agro-Biodiversity</span>
-            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight uppercase">Bohol Philippines <br><span class="text-amber-400">Heirloom Seed Network</span></h1>
-            <p class="text-lg md:text-xl text-stone-200 max-w-3xl mx-auto font-light">
-                Empowering communities across Bohol through local seed banking, climate-resilient bioponic farming technologies, and organic soil rehabilitation solutions.
-            </p>
-            <div class="pt-4 flex flex-col sm:flex-row justify-center items-center gap-4">
-                <a href="#heirloom" class="w-full sm:w-auto bg-amber-600 hover:bg-amber-700 text-white font-semibold px-8 py-3.5 rounded-xl transition shadow-lg text-center">Explore Collection</a>
-                <a href="#mission" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white border border-white/30 font-semibold px-8 py-3.5 rounded-xl transition text-center backdrop-blur-sm">Learn Our Approach</a>
-            </div>
-        </div>
+    <header>
+        <h1>Bohol Seed Network</h1>
+        <p>Community-Based Seed Sovereignty & Heirloom Variety Protection</p>
     </header>
 
-    <!-- Section: Core Mission -->
-    <section id="mission" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
-            <h2 class="text-xs uppercase tracking-widest text-amber-600 font-bold">Community Sovereignty</h2>
-            <p class="text-3xl md:text-4xl font-bold tracking-tight text-stone-900">The Seed Sovereignty Initiative</p>
-            <div class="w-16 h-1 bg-amber-600 mx-auto rounded-full mt-4"></div>
-        </div>
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-            <div class="space-y-6 text-stone-600 text-lg">
-                <p>
-                    True agricultural resilience begins with the seed. Our dedicated mission focuses on establishing a decentralized network of community-managed seed libraries to preserve culturally significant, open-pollinated heirloom vegetable varieties.
-                </p>
-                <p>
-                    By safeguarding genetic strains adapted to localized ecosystems, we decouple smallholder farms from chemical dependencies and external multinational corporate supply loops. We cultivate self-reliance directly from the soil up.
-                </p>
-                <div class="border-l-4 border-agriGreen pl-4 italic text-stone-800 bg-stone-100 py-3 pr-2 rounded-r-lg">
-                    "A community that does not control its seeds can never truly control its food security or its economic future."
-                </div>
-            </div>
-            <div class="grid grid-cols-2 gap-4">
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 text-center space-y-2">
-                    <i class="fa-solid fa-boxes-stacked text-3xl text-agriGreen"></i>
-                    <h3 class="font-bold text-stone-900 block pt-2">Seed Library</h3>
-                    <p class="text-sm text-stone-500">Decentralized municipal germplasm preservation.</p>
-                </div>
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 text-center space-y-2">
-                    <i class="fa-solid fa-graduation-cap text-3xl text-agriGreen"></i>
-                    <h3 class="font-bold text-stone-900 block pt-2">Capacity Training</h3>
-                    <p class="text-sm text-stone-500">Certified standard vegetable seed production tracks.</p>
-                </div>
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 text-center space-y-2">
-                    <i class="fa-solid fa-shield-halved text-3xl text-agriGreen"></i>
-                    <h3 class="font-bold text-stone-900 block pt-2">Agro-Ecology</h3>
-                    <p class="text-sm text-stone-500">Participatory guarantee frameworks and organic standards.</p>
-                </div>
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 text-center space-y-2">
-                    <i class="fa-solid fa-dna text-3xl text-agriGreen"></i>
-                    <h3 class="font-bold text-stone-900 block pt-2">Genetic Heritage</h3>
-                    <p class="text-sm text-stone-500">Protecting vulnerable native open-pollinated flora lines.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section: Heirloom Seed Collection -->
-    
-<!-- ================= HEIRLOOM SEED SECTION ================= -->
-<section id="heirloom">
-    <div>
-        <div>
-            <h2>Preserved Strains</h2>
-            <p>Heirloom Vegetable Collections</p>
-            <div class="line-divider"></div>
-        </div>
-        
-        <div class="catalog-header">
-            <!-- This is your main hero image banner -->
-            <img alt="Diverse collection of handpicked heirloom vegetables and native plant profiles" src="images/main-collection-hero.jpg">
+    <main>
+        <!-- ================= HEIRLOOM SEED SECTION ================= -->
+        <section id="heirloom">
             <div>
-                <p>Our active catalog includes resilient, non-hybridized selections curated for optimal performance in regional microclimates without requiring chemical interventions.</p>
-                <a href="catalogs/seed-catalog.pdf" target="_blank">
-                    <i></i>
-                    <span>Download Full Registry</span>
-                </a>
-            </div>
-        </div>
-
-        <div class="strains-grid">
-            
-            <!-- CARD 1: SOLANACEAE -->
-            <div class="strain-card">
-                <img alt="Native Solanaceae Strain - Heat Armor" src="images/solanaceae-strain.jpg" style="width:100%; height:200px; object-fit:cover; border-radius:4px;">
-                <div class="card-content">
-                    <span class="category-tag">Solanaceae Strain</span>
-                    <h3>Native Varieties (Heat Armor)</h3>
-                    <p>Ultra-resilient nightshades selected for exceptional heat tolerance and natural pest barriers. Featuring robust stalk profiles and thickened cuticles, these native landrace peppers, eggplants, and tomatoes are bred to withstand extreme weather shocks while delivering heavy, high-flavor yields without intensive chemical inputs.</p>
+                <div class="section-title-container">
+                    <h2>Preserved Strains</h2>
+                    <p>Heirloom Vegetable Collections</p>
+                    <div class="line-divider"></div>
                 </div>
-            </div>
-            
-            <!-- CARD 2: LEGUMINOSAE -->
-            <div class="strain-card">
-                <img alt="Indigenous Leguminosae Strain - Living Nitrogen" src="images/leguminosae-strain.jpg" style="width:100%; height:200px; object-fit:cover; border-radius:4px;">
-                <div class="card-content">
-                    <span class="category-tag">Leguminosae Strain</span>
-                    <h3>Indigenous Legumes (Living Nitrogen)</h3>
-                    <p>High-vigor heirloom field beans and climbing varieties optimized for vertical polyculture. These indigenous legumes feature hyper-efficient root-nodule symbiosis, pulling atmospheric nitrogen down to naturally feed your soil while maximizing vertical space with aggressive vining habits and heavy, protein-rich yields.</p>
-                </div>
-            </div>
-            
-            <!-- CARD 3: CUCURBITACEAE -->
-            <div class="strain-card">
-                <img alt="Traditional Cucurbitaceae Strain - Living Mulch" src="images/cucurbitaceae-strain.jpg" style="width:100%; height:200px; object-fit:cover; border-radius:4px;">
-                <div class="card-content">
-                    <span class="category-tag">Cucurbitaceae Strain</span>
-                    <h3>Traditional Cucurbits (Living Mulch)</h3>
-                    <p>Traditional, deep-rooted squashes and melons engineered for total ground-cover dominance. Their massive fan leaves form a living canopy that traps soil moisture and suppresses weeds, while extensive taproot networks lock in drought-hardy vigor and concentrate rich, ancient flavor profiles into every fruit.</p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-    <!-- Section: Bioponics Technology -->
-    <section id="bioponics" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-            <div class="order-2 md:order-1 rounded-2xl overflow-hidden shadow-lg border border-stone-200 bg-white p-4">
-                <img src="https://www.mdpi.com/agronomy/agronomy-13-01436/article_deploy/html/images/agronomy-13-01436-g002.png" alt="Technical diagram outlining bioponic cycling and sustainable biological filtration systems" class="w-full rounded-xl">
-            </div>
-            <div class="space-y-6 order-1 md:order-2">
-                <span class="text-xs uppercase tracking-widest text-emerald-600 font-bold">Non-Electric Hydroponic Successions</span>
-                <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-stone-900">The Bioponic System</h2>
-                <div class="w-16 h-1 bg-emerald-600 rounded-full my-4"></div>
-                <p class="text-stone-600 text-lg">
-                    Bioponics bridges the structural control of soil-free hydroponics with the complex microbiological health of traditional organic soil cultivation. 
-                </p>
-                <p class="text-stone-600 text-lg">
-                    Engineered precisely to perform without continuous electrical dependencies, our non-electric, stagnant bioponic succession blueprints prioritize strategic upcycling. By repurposing common consumer plastics into specialized cultivation vessels, we dramatically drop infrastructure entry costs for family units.
-                </p>
-                <ul class="space-y-3 font-medium text-stone-700 pb-2">
-                    <li class="flex items-center space-x-3">
-                        <i class="fa-solid fa-circle-check text-emerald-600 text-xl"></i>
-                        <span>Zero electricity consumption inputs required</span>
-                    </li>
-                    <li class="flex items-center space-x-3">
-                        <i class="fa-solid fa-circle-check text-emerald-600 text-xl"></i>
-                        <span>Upcycled post-consumer vessels and infrastructure</span>
-                    </li>
-                    <li class="flex items-center space-x-3">
-                        <i class="fa-solid fa-circle-check text-emerald-600 text-xl"></i>
-                        <span>Organic nutrient arrays driven by localized biology</span>
-                    </li>
-                </ul>
-                <!-- UPDATED PATH FOR FOLDER STRUCTURE -->
-                <a href="blueprints/bioponics-blueprint.pdf" target="_blank" class="inline-flex items-center space-x-2 bg-emerald-700 hover:bg-emerald-800 text-white font-bold px-6 py-3 rounded-xl transition shadow-md text-sm">
-                    <i class="fa-solid fa-diagram-project"></i>
-                    <span>Access System Blueprints</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section: Soil Amendments -->
-    <section id="soil" class="bg-stone-900 text-stone-100 py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="space-y-6">
-                    <span class="text-xs uppercase tracking-widest text-amber-500 font-bold">Circular Waste Management</span>
-                    <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white">Biochar-Enriched Organic Soil Amendments</h2>
-                    <div class="w-16 h-1 bg-amber-500 rounded-full my-4"></div>
-                    <p class="text-stone-400 text-lg">
-                        Our circular economy initiatives focus heavily on processing municipal and agricultural bio-wastes into high-performance structural substrates. 
-                    </p>
-                    <p class="text-stone-400 text-lg">
-                        By integrating specialized pyrolyzed biochar structures into our organic compost transformations, we construct durable soil amendments that stabilize vital micro-nutrients, optimize water retention metrics, and permanently lock carbon deep into farm topsoils.
-                    </p>
-                    <div class="p-4 bg-white/5 rounded-xl border border-white/10 space-y-2">
-                        <span class="text-amber-400 font-bold text-sm block"><i class="fa-solid fa-circle-nodes mr-2"></i>Microbiological Housing</span>
-                        <p class="text-stone-400 text-sm">The highly porous internal architecture of biochar provides permanent physical shelter for beneficial mycorrhizal networks and nitrogen-fixing bacteria.</p>
-                    </div>
-                </div>
-                <div class="rounded-2xl overflow-hidden shadow-2xl border border-stone-800">
-                    <img src="https://cdn.mos.cms.futurecdn.net/JJmvrUJFFMNNoTaGGrij5W.jpg" alt="Rich black biochar used on a gardening trowel to rehabilitate topsoil fertility metrics" class="w-full h-96 object-cover">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section: New Projects -->
-    <section id="projects" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
-            <h2 class="text-xs uppercase tracking-widest text-agriGreen font-bold">Research & Development</h2>
-            <p class="text-3xl md:text-4xl font-bold tracking-tight text-stone-900">Active Strategic Initiatives</p>
-            <div class="w-16 h-1 bg-agriGreen mx-auto rounded-full mt-4"></div>
-        </div>
-        
-        <div class="grid md:grid-cols-2 gap-8">
-            <!-- Project 1 -->
-            <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-200 hover:border-emerald-600/30 transition flex flex-col justify-between">
-                <div class="space-y-4">
-                    <div class="inline-flex items-center space-x-2 text-xs font-bold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full">
-                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                        <span>Active Implementation Track</span>
-                    </div>
-                    <h3 class="text-2xl font-bold text-stone-900">Biochar Soil Viability Extension</h3>
-                    <p class="text-stone-600">
-                        A structured development project investigating the deployment scaling, tracking mechanics, and crop performance metrics of carbon-retaining biochar amendments across regional cooperative farms.
-                    </p>
-                </div>
-                <div class="mt-6 pt-6 border-t border-stone-100 flex justify-between items-center text-sm font-semibold text-stone-500">
-                    <span>Target: Soil Rehabilitation</span>
-                    <span class="text-agriGreen"><i class="fa-solid fa-arrow-right"></i></span>
-                </div>
-            </div>
-
-            <!-- Project 2 -->
-            <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-200 hover:border-amber-600/30 transition flex flex-col justify-between">
-                <div class="space-y-4">
-                    <div class="inline-flex items-center space-x-2 text-xs font-bold text-amber-700 bg-amber-50 px-3 py-1 rounded-full">
-                        <span class="w-2 h-2 rounded-full bg-amber-500"></span>
-                        <span>Community Deployment Track</span>
-                    </div>
-                    <h3 class="text-2xl font-bold text-stone-900">Municipal Technology Transfer Framework</h3>
-                    <p class="text-stone-600">
-                        Systematic training syllabus delivery and practical demonstration models establishing standardized seed-saving competencies and bioponic modules across rural barangay units.
-                    </p>
-                </div>
-                <div class="mt-6 pt-6 border-t border-stone-100 flex justify-between items-center text-sm font-semibold text-stone-500">
-                    <span>Target: Knowledge Exchange</span>
-                    <span class="text-amber-600"><i class="fa-solid fa-arrow-right"></i></span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section: Newsletters & Publications -->
-    <section id="newsletter" class="bg-white py-16 border-t border-stone-200">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-gradient-to-r from-agriGreen to-emerald-800 rounded-3xl p-8 md:p-12 shadow-xl text-white flex flex-col lg:flex-row items-center justify-between gap-8">
-                <div class="space-y-3 text-center lg:text-left">
-                    <span class="text-xs font-bold tracking-widest text-emerald-300 uppercase bg-white/10 px-3 py-1 rounded-full inline-block">Updates & Field Notes</span>
-                    <h3 class="text-2xl md:text-3xl font-black tracking-tight">Read Our Latest Newsletter</h3>
-                    <p class="text-stone-200 text-sm md:text-base max-w-xl font-light">
-                        Stay linked with our field milestones. Download recent literature on community seed libraries, organic farm monitoring, and active bioponic field trials.
-                    </p>
-                </div>
-                <div class="w-full lg:w-auto shrink-0 flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <!-- UPDATED PATH FOR FOLDER STRUCTURE -->
-                    <a href="newsletters/newsletter-latest.pdf" target="_blank" class="w-full sm:w-auto bg-amber-500 hover:bg-amber-600 text-stone-950 font-bold px-6 py-4 rounded-xl transition shadow-md text-center flex items-center justify-center space-x-2">
-                        <i class="fa-solid fa-file-pdf text-lg"></i>
-                        <span>Download Current Edition</span>
+                
+                <div class="catalog-header">
+                    <p>Our active community registry includes highly resilient, non-hybridized selections curated for optimal performance across regional microclimates without requiring synthetic chemical interventions.</p>
+                    <a href="catalogs/seed-catalog.pdf" target="_blank" class="download-btn">
+                        <span>Download Full Registry</span>
                     </a>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Section: Contact & Footer -->
-    <section id="contact" class="bg-stone-100 border-t border-stone-200 py-16">
-        <div class="max-w-4xl mx-auto px-4 text-center space-y-8">
-            <div class="space-y-3">
-                <h2 class="text-3xl font-bold tracking-tight text-stone-900">Connect With Our Network</h2>
-                <p class="text-stone-600 max-w-xl mx-auto">
-                    Interested in seed accessions, training schedules, technology blueprints, or professional project partnerships? Reach out directly.
-                </p>
-            </div>
-            
-            <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-200 grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto text-left">
-                <div class="flex items-start space-x-4">
-                    <div class="text-agriGreen text-2xl pt-1">
-                        <i class="fa-solid fa-building-flag"></i>
+                <div class="strains-grid">
+                    
+                    <!-- CARD 1: SOLANACEAE -->
+                    <div class="strain-card">
+                        <img alt="Native Solanaceae Strain - Heat Armor" src="images/solanaceae-strain.jpg">
+                        <div class="card-content">
+                            <span class="category-tag">Solanaceae Strain</span>
+                            <h3>Native Varieties (Heat Armor)</h3>
+                            <p>Ultra-resilient nightshades selected for exceptional heat tolerance and natural pest barriers. Featuring robust stalk profiles and thickened cuticles, these native landrace peppers, eggplants, and tomatoes are bred to withstand extreme weather shocks while delivering heavy, high-flavor yields without intensive chemical inputs.</p>
+                        </div>
                     </div>
-                    <div>
-                        <h4 class="font-bold text-stone-900">Headquarters</h4>
-                        <p class="text-sm text-stone-500 mt-1">Bohol Philippines Heirloom Seed Network<br>Bohol, Philippines</p>
+                    
+                    <!-- CARD 2: LEGUMINOSAE -->
+                    <div class="strain-card">
+                        <img alt="Indigenous Leguminosae Strain - Living Nitrogen" src="images/leguminosae-strain.jpg">
+                        <div class="card-content">
+                            <span class="category-tag">Leguminosae Strain</span>
+                            <h3>Indigenous Legumes (Living Nitrogen)</h3>
+                            <p>High-vigor heirloom field beans and climbing varieties optimized for vertical polyculture. These indigenous legumes feature hyper-efficient root-nodule symbiosis, pulling atmospheric nitrogen down to naturally feed your soil while maximizing vertical space with aggressive vining habits and heavy, protein-rich yields.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="flex items-start space-x-4">
-                    <div class="text-agriGreen text-2xl pt-1">
-                        <i class="fa-solid fa-envelope"></i>
+                    
+                    <!-- CARD 3: CUCURBITACEAE -->
+                    <div class="strain-card">
+                        <img alt="Traditional Cucurbitaceae Strain - Living Mulch" src="images/cucurbitaceae-strain.jpg">
+                        <div class="card-content">
+                            <span class="category-tag">Cucurbitaceae Strain</span>
+                            <h3>Traditional Cucurbits (Living Mulch)</h3>
+                            <p>Traditional, deep-rooted squashes and melons engineered for total ground-cover dominance. Their massive fan leaves form a living canopy that traps soil moisture and suppresses weeds, while extensive taproot networks lock in drought-hardy vigor and concentrate rich, ancient flavor profiles into every fruit.</p>
+                        </div>
                     </div>
-                    <div>
-                        <h4 class="font-bold text-stone-900">Digital Access</h4>
-                        <p class="text-sm text-stone-500 mt-1">GitHub Organization Portal<br>gghheirloom@gmail.com</p>
-                    </div>
-                </div>
-            </div>
 
-            <div class="pt-8 text-xs text-stone-400 space-y-2 border-t border-stone-200">
-                <p>&copy; 2026 BOHOL PHILIPPINES HEIRLOOM SEED NETWORK. All Rights Reserved.</p>
-                <p>Engineered for ecological preservation and community self-reliance networks.</p>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Bohol Seed Network & Green Gardens of Hope. All Rights Reserved.</p>
+    </footer>
 
 </body>
 </html>
