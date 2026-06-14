@@ -47,6 +47,7 @@
                     <a href="#bioponics" class="text-stone-600 hover:text-agriGreen transition">Bioponics</a>
                     <a href="#soil" class="text-stone-600 hover:text-agriGreen transition">Soil Amendments</a>
                     <a href="#projects" class="text-stone-600 hover:text-agriGreen transition">Projects</a>
+                    <a href="#newsletter" class="text-stone-600 hover:text-agriGreen transition">Publications</a>
                     <a href="#contact" class="bg-agriGreen text-white px-5 py-2.5 rounded-lg hover:bg-agriGreen-dark transition shadow-sm">Contact Us</a>
                 </div>
             </div>
@@ -123,9 +124,14 @@
             </div>
             
             <div class="mb-8 rounded-2xl overflow-hidden shadow-md bg-white">
+                <!-- Replace 'collection-banner.jpg' with your own uploaded filename when ready -->
                 <img src="https://shegrowsveg.com/wp-content/uploads/2024/10/DSF1627-scaled-e1728642769788-2048x1638-1.jpg" alt="Diverse collection of handpicked heirloom vegetables and native plant profiles" class="w-full h-80 object-cover">
-                <div class="p-6 bg-white border-t border-stone-100">
+                <div class="p-6 bg-white border-t border-stone-100 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                     <p class="text-stone-600 text-sm italic">Our active catalog includes resilient, non-hybridized selections curated for optimal performance in regional microclimates without requiring chemical interventions.</p>
+                    <a href="seed-catalog.pdf" target="_blank" class="shrink-0 text-center bg-agriGreen hover:bg-agriGreen-dark text-white text-xs font-bold px-4 py-2 rounded-lg transition shadow-sm flex items-center justify-center space-x-2">
+                        <i class="fa-solid fa-download"></i>
+                        <span>Download Full Registry</span>
+                    </a>
                 </div>
             </div>
 
@@ -162,6 +168,7 @@
     <section id="bioponics" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid md:grid-cols-2 gap-12 items-center">
             <div class="order-2 md:order-1 rounded-2xl overflow-hidden shadow-lg border border-stone-200 bg-white p-4">
+                <!-- Replace with your system photo path like src="bioponics-setup.jpg" once uploaded to GitHub -->
                 <img src="https://www.mdpi.com/agronomy/agronomy-13-01436/article_deploy/html/images/agronomy-13-01436-g002.png" alt="Technical diagram outlining bioponic cycling and sustainable biological filtration systems" class="w-full rounded-xl">
             </div>
             <div class="space-y-6 order-1 md:order-2">
@@ -174,7 +181,7 @@
                 <p class="text-stone-600 text-lg">
                     Engineered precisely to perform without continuous electrical dependencies, our non-electric, stagnant bioponic succession blueprints prioritize strategic upcycling. By repurposing common consumer plastics into specialized cultivation vessels, we dramatically drop infrastructure entry costs for family units.
                 </p>
-                <ul class="space-y-3 font-medium text-stone-700">
+                <ul class="space-y-3 font-medium text-stone-700 pb-2">
                     <li class="flex items-center space-x-3">
                         <i class="fa-solid fa-circle-check text-emerald-600 text-xl"></i>
                         <span>Zero electricity consumption inputs required</span>
@@ -188,6 +195,10 @@
                         <span>Organic nutrient arrays driven by localized biology</span>
                     </li>
                 </ul>
+                <a href="bioponics-blueprint.pdf" target="_blank" class="inline-flex items-center space-x-2 bg-emerald-700 hover:bg-emerald-800 text-white font-bold px-6 py-3 rounded-xl transition shadow-md text-sm">
+                    <i class="fa-solid fa-diagram-project"></i>
+                    <span>Access System Blueprints</span>
+                </a>
             </div>
         </div>
     </section>
@@ -212,6 +223,7 @@
                     </div>
                 </div>
                 <div class="rounded-2xl overflow-hidden shadow-2xl border border-stone-800">
+                    <!-- Replace with your substrate photo path like src="biochar-mix.jpg" once uploaded to GitHub -->
                     <img src="https://cdn.mos.cms.futurecdn.net/JJmvrUJFFMNNoTaGGrij5W.jpg" alt="Rich black biochar used on a gardening trowel to rehabilitate topsoil fertility metrics" class="w-full h-96 object-cover">
                 </div>
             </div>
@@ -260,6 +272,28 @@
                 <div class="mt-6 pt-6 border-t border-stone-100 flex justify-between items-center text-sm font-semibold text-stone-500">
                     <span>Target: Knowledge Exchange</span>
                     <span class="text-amber-600"><i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: Newsletters & Publications -->
+    <section id="newsletter" class="bg-white py-16 border-t border-stone-200">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-r from-agriGreen to-emerald-800 rounded-3xl p-8 md:p-12 shadow-xl text-white flex flex-col lg:flex-row items-center justify-between gap-8">
+                <div class="space-y-3 text-center lg:text-left">
+                    <span class="text-xs font-bold tracking-widest text-emerald-300 uppercase bg-white/10 px-3 py-1 rounded-full inline-block">Updates & Field Notes</span>
+                    <h3 class="text-2xl md:text-3xl font-black tracking-tight">Read Our Latest Newsletter</h3>
+                    <p class="text-stone-200 text-sm md:text-base max-w-xl font-light">
+                        Stay linked with our field milestones. Download recent literature on community seed libraries, organic farm monitoring, and active bioponic field trials.
+                    </p>
+                </div>
+                <div class="w-full lg:w-auto shrink-0 flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <!-- Replace 'newsletter-latest.pdf' with your actual newsletter filename on GitHub -->
+                    <a href="newsletter-latest.pdf" target="_blank" class="w-full sm:w-auto bg-amber-500 hover:bg-amber-600 text-stone-950 font-bold px-6 py-4 rounded-xl transition shadow-md text-center flex items-center justify-center space-x-2">
+                        <i class="fa-solid fa-file-pdf text-lg"></i>
+                        <span>Download Current Edition</span>
+                    </a>
                 </div>
             </div>
         </div>
